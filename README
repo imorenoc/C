@@ -1,0 +1,13 @@
+El siguiente manual tiene la intensión de explicar la programación en =C= con ejemplos sencillo, fáciles de entender, no soy programador de formación más bien un programador autodidacta, así que es probable que utilice de manera incorrecta algún concepto.
+
+Al aprender a utilizar =C= algo de lo que me di cuenta es que importa mucho el editor que utilices para programar, al principio utilice [TextMate](https://macromates.com/) un editor muy agradable y fue ahí donde descubrí los Snippets, son atajos que te facilitan la vida en la programación. Uno bien puede quedarse con este editor, o alguno similar, sin embargo los requerimientos de programación te motivan a buscar nuevas alternativas. Es por eso que llegue a conocer a =emacs= y =vim=, ambos los intente aprender, a ambos los deje, pero al final retome =emacs= que ahora es mi editor por defecto prácticamente para todo. Por ejemplo, utilizo =emacs= para:
+
++ LaTeX
++ Gnuplot
++ R
++ Org
++ C program
+
+Sugerencias, utilicen =emacs= como editor, al principio puede resultarles complicado pero con el tiempo se darán cuenta que es la mejor decisión que pudieron haber tomado. El mundo de =emacs= es realmente enorme, habría que hacer un tutorial únicamente para =emacs= y aun así no sería suficiente.
+
+Al final deben utilizar el editor con el que se sientan cómodos, pero también y sea útil a sus propósitos.
