@@ -1,0 +1,17 @@
+#+SETUP: index
+
+* Introducción
+
+El siguiente manual tiene la intensión de explicar la programación en =C= con ejemplos sencillos y fáciles de entender, programas que puedan ser escalabres a las necesidades del usuario. Soy un programador autodidacta, que hace uso de la programación para resolver los problemas de ingeniería que se me presentan. 
+
+El maestro que me enseño =C= también usa =emacs= como editor, como buen aprendiz descargue =emacs= y lo utilice, pero me desilusiono muy pronto. Recurrí a internet y empece a utilizar [[https://macromates.com/][TextMate]], un editor muy agradable para mac, fue ahí donde descubrí los *Snippets*, atajos que te facilitan la vida en la programación. Uno bien puede quedarse con este editor, o alguno similar, sin embargo los requerimientos de programación te motivan a buscar nuevas alternativas. Es por eso que regrese a =emacs= (también intente con =vim=), curiosamente no fue la necesidad de programar en =C= lo que me hizó regresar sino la programación en =R= en donde uno puede visualizar fácilmente el protencial de =emacs=.  =emacs= es mi editor por defecto prácticamente para todo, e.g., lo utilizo para:
+
++ LaTeX
++ Gnuplot
++ R
++ Org
++ C program
+
+Como sugerencias utilicen =emacs= como editor, al principio puede resultarles complicado pero con el tiempo se darán cuenta que es la mejor decisión que pudieron haber tomado. El mundo de =emacs= es realmente enorme, y emocionante. Al final deben utilizar el editor con el que se sientan cómodos y que sea útil a sus propósitos.
+
+El manual lo pueden leer en el archvio [[file:CProgram.org][CProgram.org]], en línea o si descargan el repositorio en el =html=.
