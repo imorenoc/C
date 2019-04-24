@@ -1,7 +1,13 @@
-#+TITLE: Curso practico de programación en C
+#+TITLE: Curso práctico de programación en C
 #+AUTHOR: Isaías Moreno Cruz 
 #+DATE: 2019:03:5
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://gongzhitaao.org/orgcss/org.css"/>
 #+STARTUP: indent
+
+
+* Introducción
+
+
 
 * Teoría básica
 
@@ -123,7 +129,7 @@ Una forma interactiva de ejecutar un programa es solicitando los valores de algu
   {
     int a, b, sum;
 
-    printf("Ingrese el primer enter\n");
+    printf("Ingrese el primer entero\n");
     scanf("%d", &a);
     printf("Ingrese el segundo entero\n");
     scanf("%d", &b);
@@ -142,8 +148,9 @@ Una forma interactiva de ejecutar un programa es solicitando los valores de algu
 #+END_SRC
 
 #+RESULTS:
-|   1 |
-| 2.0 |
+| Ingrese | el   | primer  | enter  |
+| Ingrese | el   | segundo | entero |
+| La      | suma | es      | 79     |
 
 * Ciclos
 
@@ -191,7 +198,6 @@ Para trabajar con ciclos también es necesario conocer los operadores Booleanos:
 + a <= b, $a$ menor o igual que $b$
 + a >= b, $a$ mayor o igual que $b$
 
-
 ** for
 
 El comando =for= realiza un ciclo definido por un contador, en un intervalo y con un incremento determinado. A continuación se muestra la sintaxis del comando =for=, el contador es =i= en el intervalo [0,n), con incrementos =i++=. Hay que recordar que los contadores en =C= inician en cero, y que $i++$ es equivalente a  $i= i + 1$.
@@ -218,6 +224,37 @@ El comando =for= realiza un ciclo definido por un contador, en un intervalo y co
 
 #+RESULTS: for.c
 : La suma es 1225
+
+Para visualizar mejor lo que esta ocurriendo en el ciclo =for= vamos a imprimirlo.
+
+#+NAME: forWithP.c
+#+BEGIN_SRC C :exports both
+  /* gcc -o for for.c */
+  #include <stdio.h>
+
+  int main( )
+  {
+    int sum, i, N;
+    sum = 0;
+    N = 5;
+
+    for (i = 0; i < N; i++){
+      printf("sum = %d + %d\t", sum, i);
+      sum += i;
+      printf("sum = %d\n", sum);
+    }
+
+    return 0;
+  }
+#+END_SRC
+
+#+RESULTS: forWithP.c
+| sum = 0 + 0 | sum = 0  |
+| sum = 0 + 1 | sum = 1  |
+| sum = 1 + 2 | sum = 3  |
+| sum = 3 + 3 | sum = 6  |
+| sum = 6 + 4 | sum = 10 |
+
 
 ** if
 

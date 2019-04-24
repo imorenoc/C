@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-03-13 Wed 21:57 -->
+<!-- 2019-04-23 Tue 23:48 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Curso practico de programación en C</title>
+<title>Curso práctico de programación en C</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="Isaías Moreno Cruz" />
 <style type="text/css">
@@ -180,6 +180,7 @@
   .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
+<link rel="stylesheet" type="text/css" href="https://gongzhitaao.org/orgcss/org.css"/>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -251,70 +252,78 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">Curso practico de programación en C</h1>
+<h1 class="title">Curso práctico de programación en C</h1>
 <div id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgd63edaa">1. Teoría básica</a>
+<li><a href="#org75c7d89">1. Introducción</a></li>
+<li><a href="#org49493a4">2. Teoría básica</a>
 <ul>
-<li><a href="#org38953d8">1.1. Hola Mundo</a></li>
-<li><a href="#orgfc56e07">1.2. Operaciones matemáticas</a></li>
-<li><a href="#orgcd58978">1.3. Lectura de datos con <code>scanf</code></a></li>
+<li><a href="#orgf02a4f1">2.1. Hola Mundo</a></li>
+<li><a href="#org1112a21">2.2. Operaciones matemáticas</a></li>
+<li><a href="#org54c76ae">2.3. Lectura de datos con <code>scanf</code></a></li>
 </ul>
 </li>
-<li><a href="#org81f139d">2. Ciclos</a>
+<li><a href="#orge975973">3. Ciclos</a>
 <ul>
-<li><a href="#orge77c287">2.1. for</a></li>
-<li><a href="#org9013058">2.2. if</a></li>
-<li><a href="#org345e985">2.3. else</a></li>
-<li><a href="#orgf04c1b9">2.4. else if</a></li>
-<li><a href="#org97620bb">2.5. while</a></li>
-<li><a href="#org531d6cd">2.6. do/while</a></li>
-<li><a href="#orgf919f60">2.7. break</a></li>
+<li><a href="#org146f574">3.1. for</a></li>
+<li><a href="#org857cef1">3.2. if</a></li>
+<li><a href="#org95a9581">3.3. else</a></li>
+<li><a href="#orga2dcf8d">3.4. else if</a></li>
+<li><a href="#org3bbbbef">3.5. while</a></li>
+<li><a href="#orgcecda3c">3.6. do/while</a></li>
+<li><a href="#org7b4139c">3.7. break</a></li>
 </ul>
 </li>
-<li><a href="#orgd5ddb56">3. Funciones</a>
+<li><a href="#org6aa882a">4. Funciones</a>
 <ul>
-<li><a href="#org2605b47">3.1. Declaración de la función dentro del <code>main</code></a></li>
-<li><a href="#orgbf607f3">3.2. Declaración de la función en un archivo externo</a></li>
+<li><a href="#orgf144ca5">4.1. Declaración de la función dentro del <code>main</code></a></li>
+<li><a href="#orgb37e808">4.2. Declaración de la función en un archivo externo</a></li>
 </ul>
 </li>
-<li><a href="#orga9b9859">4. Punteros</a></li>
-<li><a href="#orgb327b30">5. Leer datos de entrada desde la terminal</a></li>
-<li><a href="#org223b40f">6. Guardar datos de salida en archivo</a></li>
-<li><a href="#orgcec9c0e">7. Leer un archivo de datos</a></li>
-<li><a href="#orgc6998f7">8. Reciclando código</a></li>
-<li><a href="#orgd12f35e">9. Makefile</a></li>
-<li><a href="#orgcfa2d24">10. Funciones gsl</a></li>
-<li><a href="#org20357d3">11. Funciones básicas</a>
+<li><a href="#orge298fa5">5. Punteros</a></li>
+<li><a href="#org723e8dd">6. Leer datos de entrada desde la terminal</a></li>
+<li><a href="#org4e8beba">7. Guardar datos de salida en archivo</a></li>
+<li><a href="#org6d4b723">8. Leer un archivo de datos</a></li>
+<li><a href="#org250429e">9. Reciclando código</a></li>
+<li><a href="#orge98bd41">10. Makefile</a></li>
+<li><a href="#org84f8607">11. Funciones gsl</a></li>
+<li><a href="#org90d854c">12. Funciones básicas</a>
 <ul>
-<li><a href="#org8db7c65">11.1. Base</a></li>
+<li><a href="#org5ffb053">12.1. Base</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgd63edaa" class="outline-2">
-<h2 id="orgd63edaa"><span class="section-number-2">1</span> Teoría básica</h2>
-<div class="outline-text-2" id="text-1">
+
+<div id="outline-container-org75c7d89" class="outline-2">
+<h2 id="org75c7d89"><span class="section-number-2">1</span> Introducción</h2>
 </div>
-<div id="outline-container-org38953d8" class="outline-3">
-<h3 id="org38953d8"><span class="section-number-3">1.1</span> Hola Mundo</h3>
-<div class="outline-text-3" id="text-1-1">
+
+
+
+<div id="outline-container-org49493a4" class="outline-2">
+<h2 id="org49493a4"><span class="section-number-2">2</span> Teoría básica</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgf02a4f1" class="outline-3">
+<h3 id="orgf02a4f1"><span class="section-number-3">2.1</span> Hola Mundo</h3>
+<div class="outline-text-3" id="text-2-1">
 <p>
 El programa clásico para iniciar es el <code>¡hola mundo!</code>. Que continuación se muestra.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-C" id="org2c36ee1"><span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">gcc -o hello hello.c </span><span style="color: #5F7F5F;">*/</span>
-<span style="color: #94BFF3;">#include</span> <span style="color: #CC9393;">&lt;stdio.h&gt;</span>
+<pre class="src src-C" id="orgb4e1867"><span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">gcc -o hello hello.c </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdio.h&gt;</span>
 
-<span style="color: #7CB8BB;">int</span> <span style="color: #93E0E3;">main</span>()
+<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">main</span>()
 {
-  printf(<span style="color: #CC9393;">"&#161;hola mundo!\n"</span>);
-  <span style="color: #F0DFAF; font-weight: bold;">return</span> 0;
+  printf(<span style="color: #2d9574;">"&#161;hola mundo!\n"</span>);
+  <span style="color: #3a81c3; font-weight: bold;">return</span> 0;
 }
 </pre>
 </div>
@@ -355,9 +364,9 @@ La primera opción nos generara un archivo <code>a.out</code>, que podemos ejecu
 </div>
 </div>
 
-<div id="outline-container-orgfc56e07" class="outline-3">
-<h3 id="orgfc56e07"><span class="section-number-3">1.2</span> Operaciones matemáticas</h3>
-<div class="outline-text-3" id="text-1-2">
+<div id="outline-container-org1112a21" class="outline-3">
+<h3 id="org1112a21"><span class="section-number-3">2.2</span> Operaciones matemáticas</h3>
+<div class="outline-text-3" id="text-2-2">
 <p>
 El programa <code>math.c</code> muestra las operaciones que pueden ser ejecutadas en <code>C</code>, es decir:
 </p>
@@ -385,27 +394,27 @@ La etiqueta <code>-lm</code> indica al compilador que utilice la biblioteca de m
 </p>
 
 <div class="org-src-container">
-<pre class="src src-C" id="orge78ce8a"><span style="color: #94BFF3;">#include</span> <span style="color: #CC9393;">&lt;stdio.h&gt;</span>
-<span style="color: #94BFF3;">#include</span> <span style="color: #CC9393;">&lt;math.h&gt;</span>
+<pre class="src src-C" id="org89399fd"><span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdio.h&gt;</span>
+<span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;math.h&gt;</span>
 
-<span style="color: #7CB8BB;">int</span> <span style="color: #93E0E3;">main</span>() {
-  <span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">a</span>, <span style="color: #DFAF8F;">b</span>;
-  <span style="color: #7CB8BB;">double</span> <span style="color: #DFAF8F;">x</span>, <span style="color: #DFAF8F;">y</span>;
+<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">main</span>() {
+  <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">a</span>, <span style="color: #715ab1;">b</span>;
+  <span style="color: #ba2f59; font-weight: bold;">double</span> <span style="color: #715ab1;">x</span>, <span style="color: #715ab1;">y</span>;
 
   x = 6.5;
   y = 2.9;
-  a = (<span style="color: #7CB8BB;">int</span>)x;
-  b = (<span style="color: #7CB8BB;">int</span>)y;
+  a = (<span style="color: #ba2f59; font-weight: bold;">int</span>)x;
+  b = (<span style="color: #ba2f59; font-weight: bold;">int</span>)y;
 
-  printf(<span style="color: #CC9393;">"Suma            %.2f + %.2f = %.2f\n"</span>, x, y, x + y);
-  printf(<span style="color: #CC9393;">"Resta           %f - %f = %f\n"</span>, x, y, x - y);
-  printf(<span style="color: #CC9393;">"Multiplicaci'on %f * %f = %f\n"</span>, x, y, x * y);
-  printf(<span style="color: #CC9393;">"Divisi'on       %f / %f = %.2f\n"</span>, x, y, x / y);
-  printf(<span style="color: #CC9393;">"Potencia        %f ^ %f = %.2f\n"</span>, x, y, pow(x,y));
-  printf(<span style="color: #CC9393;">"Ra'iz          sqrt(%.2f) = %.2f\n"</span>, x, sqrt(x));
-  printf(<span style="color: #CC9393;">"Modulo       mod(%d,%d) = %d\n"</span>, a, b, a%b);
+  printf(<span style="color: #2d9574;">"Suma            %.2f + %.2f = %.2f\n"</span>, x, y, x + y);
+  printf(<span style="color: #2d9574;">"Resta           %f - %f = %f\n"</span>, x, y, x - y);
+  printf(<span style="color: #2d9574;">"Multiplicaci'on %f * %f = %f\n"</span>, x, y, x * y);
+  printf(<span style="color: #2d9574;">"Divisi'on       %f / %f = %.2f\n"</span>, x, y, x / y);
+  printf(<span style="color: #2d9574;">"Potencia        %f ^ %f = %.2f\n"</span>, x, y, pow(x,y));
+  printf(<span style="color: #2d9574;">"Ra'iz          sqrt(%.2f) = %.2f\n"</span>, x, sqrt(x));
+  printf(<span style="color: #2d9574;">"Modulo       mod(%d,%d) = %d\n"</span>, a, b, a%b);
 
-  <span style="color: #F0DFAF; font-weight: bold;">return</span> 0;
+  <span style="color: #3a81c3; font-weight: bold;">return</span> 0;
 }
 </pre>
 </div>
@@ -524,35 +533,35 @@ Entre comillas va el texto que deseamos imprimir <code>"Resta %f ..."</code>, el
 </div>
 </div>
 
-<div id="outline-container-orgcd58978" class="outline-3">
-<h3 id="orgcd58978"><span class="section-number-3">1.3</span> Lectura de datos con <code>scanf</code></h3>
-<div class="outline-text-3" id="text-1-3">
+<div id="outline-container-org54c76ae" class="outline-3">
+<h3 id="org54c76ae"><span class="section-number-3">2.3</span> Lectura de datos con <code>scanf</code></h3>
+<div class="outline-text-3" id="text-2-3">
 <p>
 Una forma interactiva de ejecutar un programa es solicitando los valores de algunos valores. Es una forma muy tediosa de ejecutar un programa, al principio puede resultar útil pero con el tiempo (al terminar este manual, por ejemplo) se dará cuenta que hay mejores alternativas. Pero no deja de ser ilustrativo.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-C" id="orgbe06414"><span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">gcc -o scanf scanf.c </span><span style="color: #5F7F5F;">*/</span>
-<span style="color: #94BFF3;">#include</span> <span style="color: #CC9393;">&lt;stdio.h&gt;</span>
+<pre class="src src-C" id="org1e5ed6d"><span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">gcc -o scanf scanf.c </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdio.h&gt;</span>
 
-<span style="color: #7CB8BB;">int</span> <span style="color: #93E0E3;">main</span>()
+<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">main</span>()
 {
-  <span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">a</span>, <span style="color: #DFAF8F;">b</span>, <span style="color: #DFAF8F;">sum</span>;
+  <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">a</span>, <span style="color: #715ab1;">b</span>, <span style="color: #715ab1;">sum</span>;
 
-  printf(<span style="color: #CC9393;">"Ingrese el primer enter\n"</span>);
-  scanf(<span style="color: #CC9393;">"%d"</span>, &amp;a);
-  printf(<span style="color: #CC9393;">"Ingrese el segundo entero\n"</span>);
-  scanf(<span style="color: #CC9393;">"%d"</span>, &amp;b);
+  printf(<span style="color: #2d9574;">"Ingrese el primer entero\n"</span>);
+  scanf(<span style="color: #2d9574;">"%d"</span>, &amp;a);
+  printf(<span style="color: #2d9574;">"Ingrese el segundo entero\n"</span>);
+  scanf(<span style="color: #2d9574;">"%d"</span>, &amp;b);
   sum = a + b;
-  printf(<span style="color: #CC9393;">"La suma es %d\n"</span>, sum);
+  printf(<span style="color: #2d9574;">"La suma es %d\n"</span>, sum);
 
-  <span style="color: #F0DFAF; font-weight: bold;">return</span> 0;
+  <span style="color: #3a81c3; font-weight: bold;">return</span> 0;
 }
 </pre>
 </div>
 
 <div class="org-src-container">
-<pre class="src src-sh"><span style="color: #5F7F5F;">#</span><span style="color: #7F9F7F;">!/usr/bin/</span><span style="color: #F0DFAF; font-weight: bold;">env</span><span style="color: #7F9F7F;"> bash</span>
+<pre class="src src-sh"><span style="color: #2aa1ae; background-color: #ecf3ec;">#</span><span style="color: #2aa1ae; background-color: #ecf3ec;">!/usr/bin/</span><span style="color: #3a81c3; font-weight: bold;">env</span><span style="color: #2aa1ae; background-color: #ecf3ec;"> bash</span>
 ./scanf
 56
 23
@@ -598,31 +607,31 @@ Una forma interactiva de ejecutar un programa es solicitando los valores de algu
 </div>
 </div>
 
-<div id="outline-container-org81f139d" class="outline-2">
-<h2 id="org81f139d"><span class="section-number-2">2</span> Ciclos</h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-orge975973" class="outline-2">
+<h2 id="orge975973"><span class="section-number-2">3</span> Ciclos</h2>
+<div class="outline-text-2" id="text-3">
 <p>
 Antes de iniciar con los ciclos, vamos ver el <b><b>preincremento y posincremento</b></b>, los cuales son muy útiles a la hora de realizar ciclos en <code>C</code>.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-C" id="org73add31"><span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">gcc -o incrementing incrementing.c </span><span style="color: #5F7F5F;">*/</span>
-<span style="color: #94BFF3;">#include</span> <span style="color: #CC9393;">&lt;stdio.h&gt;</span>
+<pre class="src src-C" id="org8f49dbb"><span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">gcc -o incrementing incrementing.c </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdio.h&gt;</span>
 
-<span style="color: #7CB8BB;">int</span> <span style="color: #93E0E3;">main</span>() {
-  <span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">c</span>;
-
-  c = 5;
-  printf(<span style="color: #CC9393;">"%d\n"</span>, c);
-  printf(<span style="color: #CC9393;">"%d\n"</span>, c++);          <span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">posincremento </span><span style="color: #5F7F5F;">*/</span>
-  printf(<span style="color: #CC9393;">"%d\n\n"</span>, c);
+<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">main</span>() {
+  <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">c</span>;
 
   c = 5;
-  printf(<span style="color: #CC9393;">"%d\n"</span>, c);
-  printf(<span style="color: #CC9393;">"%d\n"</span>, ++c);          <span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">preincremento </span><span style="color: #5F7F5F;">*/</span>
-  printf(<span style="color: #CC9393;">"%d\n\n"</span>, c);
+  printf(<span style="color: #2d9574;">"%d\n"</span>, c);
+  printf(<span style="color: #2d9574;">"%d\n"</span>, c++);          <span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">posincremento </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+  printf(<span style="color: #2d9574;">"%d\n\n"</span>, c);
 
-  <span style="color: #F0DFAF; font-weight: bold;">return</span> 0;
+  c = 5;
+  printf(<span style="color: #2d9574;">"%d\n"</span>, c);
+  printf(<span style="color: #2d9574;">"%d\n"</span>, ++c);          <span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">preincremento </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+  printf(<span style="color: #2d9574;">"%d\n\n"</span>, c);
+
+  <span style="color: #3a81c3; font-weight: bold;">return</span> 0;
 }
 </pre>
 </div>
@@ -682,30 +691,29 @@ Para trabajar con ciclos también es necesario conocer los operadores Booleanos:
 </ul>
 </div>
 
-
-<div id="outline-container-orge77c287" class="outline-3">
-<h3 id="orge77c287"><span class="section-number-3">2.1</span> for</h3>
-<div class="outline-text-3" id="text-2-1">
+<div id="outline-container-org146f574" class="outline-3">
+<h3 id="org146f574"><span class="section-number-3">3.1</span> for</h3>
+<div class="outline-text-3" id="text-3-1">
 <p>
 El comando <code>for</code> realiza un ciclo definido por un contador, en un intervalo y con un incremento determinado. A continuación se muestra la sintaxis del comando <code>for</code>, el contador es <code>i</code> en el intervalo [0,n), con incrementos <code>i++</code>. Hay que recordar que los contadores en <code>C</code> inician en cero, y que \(i++\) es equivalente a  \(i= i + 1\).
 </p>
 
 <div class="org-src-container">
-<pre class="src src-C" id="orgc2a62ad"><span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">gcc -o for for.c </span><span style="color: #5F7F5F;">*/</span>
-<span style="color: #94BFF3;">#include</span> <span style="color: #CC9393;">&lt;stdio.h&gt;</span>
+<pre class="src src-C" id="org3343ba9"><span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">gcc -o for for.c </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdio.h&gt;</span>
 
-<span style="color: #7CB8BB;">int</span> <span style="color: #93E0E3;">main</span>( )
+<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">main</span>( )
 {
-  <span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">sum</span>, <span style="color: #DFAF8F;">i</span>, <span style="color: #DFAF8F;">N</span>;
+  <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">sum</span>, <span style="color: #715ab1;">i</span>, <span style="color: #715ab1;">N</span>;
   sum = 0;
   N = 50;
 
-  <span style="color: #F0DFAF; font-weight: bold;">for</span> (i = 0; i &lt; N; i++)
+  <span style="color: #3a81c3; font-weight: bold;">for</span> (i = 0; i &lt; N; i++)
     sum += i;
 
-  printf(<span style="color: #CC9393;">"La suma es %d\n"</span>, sum);
+  printf(<span style="color: #2d9574;">"La suma es %d\n"</span>, sum);
 
-  <span style="color: #F0DFAF; font-weight: bold;">return</span> 0;
+  <span style="color: #3a81c3; font-weight: bold;">return</span> 0;
 }
 </pre>
 </div>
@@ -714,52 +722,114 @@ El comando <code>for</code> realiza un ciclo definido por un contador, en un int
 La suma es 1225
 
 </pre>
+
+<p>
+Para visualizar mejor lo que esta ocurriendo en el ciclo <code>for</code> vamos a imprimirlo.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-C" id="orgee6cff4"><span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">gcc -o for for.c </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdio.h&gt;</span>
+
+<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">main</span>( )
+{
+  <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">sum</span>, <span style="color: #715ab1;">i</span>, <span style="color: #715ab1;">N</span>;
+  sum = 0;
+  N = 5;
+
+  <span style="color: #3a81c3; font-weight: bold;">for</span> (i = 0; i &lt; N; i++){
+    printf(<span style="color: #2d9574;">"sum = %d + %d\t"</span>, sum, i);
+    sum += i;
+    printf(<span style="color: #2d9574;">"sum = %d\n"</span>, sum);
+  }
+
+  <span style="color: #3a81c3; font-weight: bold;">return</span> 0;
+}
+</pre>
+</div>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">sum = 0 + 0</td>
+<td class="org-left">sum = 0</td>
+</tr>
+
+<tr>
+<td class="org-left">sum = 0 + 1</td>
+<td class="org-left">sum = 1</td>
+</tr>
+
+<tr>
+<td class="org-left">sum = 1 + 2</td>
+<td class="org-left">sum = 3</td>
+</tr>
+
+<tr>
+<td class="org-left">sum = 3 + 3</td>
+<td class="org-left">sum = 6</td>
+</tr>
+
+<tr>
+<td class="org-left">sum = 6 + 4</td>
+<td class="org-left">sum = 10</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 
-<div id="outline-container-org9013058" class="outline-3">
-<h3 id="org9013058"><span class="section-number-3">2.2</span> if</h3>
-<div class="outline-text-3" id="text-2-2">
+
+<div id="outline-container-org857cef1" class="outline-3">
+<h3 id="org857cef1"><span class="section-number-3">3.2</span> if</h3>
+<div class="outline-text-3" id="text-3-2">
 <p>
 El ciclo <code>if</code> es un condición, el ciclo se realizará mientras se cumpla una condición, cuando esta condición sea falsa entonces el ciclo termina.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-C" id="orge3eab8e"><span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">Uso de operadores </span><span style="color: #5F7F5F;">*/</span>
-<span style="color: #94BFF3;">#include</span> <span style="color: #CC9393;">&lt;stdio.h&gt;</span>
+<pre class="src src-C" id="org0fab4f6"><span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Uso de operadores </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdio.h&gt;</span>
 
-<span style="color: #7CB8BB;">int</span> <span style="color: #93E0E3;">main</span>()
+<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">main</span>()
 {
-  <span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">a</span>, <span style="color: #DFAF8F;">b</span>;
+  <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">a</span>, <span style="color: #715ab1;">b</span>;
 
   a = 5;
   b = 10;
 
-  <span style="color: #F0DFAF; font-weight: bold;">if</span> (a == b){
-      printf(<span style="color: #CC9393;">"%d es igual a %d\n"</span>, a, b);
+  <span style="color: #3a81c3; font-weight: bold;">if</span> (a == b){
+      printf(<span style="color: #2d9574;">"%d es igual a %d\n"</span>, a, b);
     }
 
-  <span style="color: #F0DFAF; font-weight: bold;">if</span> (a != b){
-        printf(<span style="color: #CC9393;">"%d no es igual a  %d\n"</span>, a, b);
+  <span style="color: #3a81c3; font-weight: bold;">if</span> (a != b){
+        printf(<span style="color: #2d9574;">"%d no es igual a  %d\n"</span>, a, b);
     }
 
-  <span style="color: #F0DFAF; font-weight: bold;">if</span> (a &lt; b){
-        printf(<span style="color: #CC9393;">"%d es menor que %d\n"</span>, a, b);
+  <span style="color: #3a81c3; font-weight: bold;">if</span> (a &lt; b){
+        printf(<span style="color: #2d9574;">"%d es menor que %d\n"</span>, a, b);
     }
 
-  <span style="color: #F0DFAF; font-weight: bold;">if</span> (a &gt; b){
-        printf(<span style="color: #CC9393;">"%d es mayor que %d\n"</span>, a ,b);
+  <span style="color: #3a81c3; font-weight: bold;">if</span> (a &gt; b){
+        printf(<span style="color: #2d9574;">"%d es mayor que %d\n"</span>, a ,b);
     }
 
-  <span style="color: #F0DFAF; font-weight: bold;">if</span> (a &lt;= b){
-        printf(<span style="color: #CC9393;">"%d es menor o igual que %d\n"</span>, a, b);
+  <span style="color: #3a81c3; font-weight: bold;">if</span> (a &lt;= b){
+        printf(<span style="color: #2d9574;">"%d es menor o igual que %d\n"</span>, a, b);
     }
 
-  <span style="color: #F0DFAF; font-weight: bold;">if</span> (a &gt;= b) {
-        printf(<span style="color: #CC9393;">"%d es mayor o igual que %d\n"</span>, a, b);
+  <span style="color: #3a81c3; font-weight: bold;">if</span> (a &gt;= b) {
+        printf(<span style="color: #2d9574;">"%d es mayor o igual que %d\n"</span>, a, b);
     }
 
-   <span style="color: #F0DFAF; font-weight: bold;">return</span> 0;
+   <span style="color: #3a81c3; font-weight: bold;">return</span> 0;
 }
 </pre>
 </div>
@@ -818,30 +888,30 @@ El ciclo <code>if</code> es un condición, el ciclo se realizará mientras se cu
 </div>
 
 
-<div id="outline-container-org345e985" class="outline-3">
-<h3 id="org345e985"><span class="section-number-3">2.3</span> else</h3>
-<div class="outline-text-3" id="text-2-3">
+<div id="outline-container-org95a9581" class="outline-3">
+<h3 id="org95a9581"><span class="section-number-3">3.3</span> else</h3>
+<div class="outline-text-3" id="text-3-3">
 <p>
 La función <code>else</code> se utiliza en el ciclo de condición <code>if</code> de manera que si no cumple la condición de <code>if</code> entonces realiza <code>else</code>.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-C" id="org73ff069"><span style="color: #94BFF3;">#include</span> <span style="color: #CC9393;">&lt;stdio.h&gt;</span>
+<pre class="src src-C" id="orgef7ae3b"><span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdio.h&gt;</span>
 
-<span style="color: #7CB8BB;">int</span> <span style="color: #93E0E3;">main</span>( )
+<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">main</span>( )
 {
-  <span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">a</span>;
+  <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">a</span>;
 
   a = 175;
 
-  <span style="color: #F0DFAF; font-weight: bold;">if</span>(a%2 == 0){
-    printf(<span style="color: #CC9393;">"N&#250;mero par\n"</span>);
+  <span style="color: #3a81c3; font-weight: bold;">if</span>(a%2 == 0){
+    printf(<span style="color: #2d9574;">"N&#250;mero par\n"</span>);
   }
-  <span style="color: #F0DFAF; font-weight: bold;">else</span>{
-    printf(<span style="color: #CC9393;">"N&#250;mero impar\n"</span>);
+  <span style="color: #3a81c3; font-weight: bold;">else</span>{
+    printf(<span style="color: #2d9574;">"N&#250;mero impar\n"</span>);
   }
 
-  <span style="color: #F0DFAF; font-weight: bold;">return</span> 0;
+  <span style="color: #3a81c3; font-weight: bold;">return</span> 0;
 }
 
 </pre>
@@ -854,38 +924,38 @@ Número impar
 </div>
 </div>
 
-<div id="outline-container-orgf04c1b9" class="outline-3">
-<h3 id="orgf04c1b9"><span class="section-number-3">2.4</span> else if</h3>
-<div class="outline-text-3" id="text-2-4">
+<div id="outline-container-orga2dcf8d" class="outline-3">
+<h3 id="orga2dcf8d"><span class="section-number-3">3.4</span> else if</h3>
+<div class="outline-text-3" id="text-3-4">
 <p>
 La función <code>else if</code> nos permite colocar mas de una condición en el ciclo de la siguiente manera. 
 </p>
 
 <div class="org-src-container">
-<pre class="src src-C" id="orge31c81f"><span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">Uso de operadores </span><span style="color: #5F7F5F;">*/</span>
-<span style="color: #94BFF3;">#include</span> <span style="color: #CC9393;">&lt;stdio.h&gt;</span>
+<pre class="src src-C" id="orgcca6770"><span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Uso de operadores </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdio.h&gt;</span>
 
-<span style="color: #7CB8BB;">int</span> <span style="color: #93E0E3;">main</span>()
+<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">main</span>()
 {
-  <span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">a</span>, <span style="color: #DFAF8F;">b</span>;
+  <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">a</span>, <span style="color: #715ab1;">b</span>;
 
   a = 5;
   b = 10;
 
-  <span style="color: #F0DFAF; font-weight: bold;">if</span> (a == b){
-      printf(<span style="color: #CC9393;">"%d es igual a %d\n"</span>, a, b);
+  <span style="color: #3a81c3; font-weight: bold;">if</span> (a == b){
+      printf(<span style="color: #2d9574;">"%d es igual a %d\n"</span>, a, b);
     }
-  <span style="color: #F0DFAF; font-weight: bold;">else</span> <span style="color: #F0DFAF; font-weight: bold;">if</span> (a &lt; b){
-        printf(<span style="color: #CC9393;">"%d es menor que %d\n"</span>, a, b);
+  <span style="color: #3a81c3; font-weight: bold;">else</span> <span style="color: #3a81c3; font-weight: bold;">if</span> (a &lt; b){
+        printf(<span style="color: #2d9574;">"%d es menor que %d\n"</span>, a, b);
     }
-  <span style="color: #F0DFAF; font-weight: bold;">else</span> <span style="color: #F0DFAF; font-weight: bold;">if</span> (a &gt; b){
-        printf(<span style="color: #CC9393;">"%d es mayor que %d\n"</span>, a ,b);
+  <span style="color: #3a81c3; font-weight: bold;">else</span> <span style="color: #3a81c3; font-weight: bold;">if</span> (a &gt; b){
+        printf(<span style="color: #2d9574;">"%d es mayor que %d\n"</span>, a ,b);
     }
-  <span style="color: #F0DFAF; font-weight: bold;">else</span>{
-    printf(<span style="color: #CC9393;">"Error\n"</span>);
+  <span style="color: #3a81c3; font-weight: bold;">else</span>{
+    printf(<span style="color: #2d9574;">"Error\n"</span>);
   }
 
-   <span style="color: #F0DFAF; font-weight: bold;">return</span> 0;
+   <span style="color: #3a81c3; font-weight: bold;">return</span> 0;
 }
 </pre>
 </div>
@@ -897,25 +967,25 @@ La función <code>else if</code> nos permite colocar mas de una condición en el
 </div>
 </div>
 
-<div id="outline-container-org97620bb" class="outline-3">
-<h3 id="org97620bb"><span class="section-number-3">2.5</span> while</h3>
-<div class="outline-text-3" id="text-2-5">
+<div id="outline-container-org3bbbbef" class="outline-3">
+<h3 id="org3bbbbef"><span class="section-number-3">3.5</span> while</h3>
+<div class="outline-text-3" id="text-3-5">
 <p>
 La función <code>while</code> realiza el ciclo mientras no se cumpla la condición.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-C" id="orgf972183"><span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">Uso del While </span><span style="color: #5F7F5F;">*/</span>
-<span style="color: #94BFF3;">#include</span> <span style="color: #CC9393;">&lt;stdio.h&gt;</span>
+<pre class="src src-C" id="org136ff19"><span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Uso del While </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdio.h&gt;</span>
 
-<span style="color: #7CB8BB;">int</span> <span style="color: #93E0E3;">main</span>() {
-  <span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">counter</span> =1;               <span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">Inicializaci'on </span><span style="color: #5F7F5F;">*/</span>
+<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">main</span>() {
+  <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">counter</span> =1;               <span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Inicializaci'on </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
 
-<span style="color: #F0DFAF; font-weight: bold;">while</span> (counter &lt;= 5) {          <span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">Condici'on </span><span style="color: #5F7F5F;">*/</span>
-  printf(<span style="color: #CC9393;">"%d "</span>, counter);
-  ++counter;                    <span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">Incremento </span><span style="color: #5F7F5F;">*/</span>
+<span style="color: #3a81c3; font-weight: bold;">while</span> (counter &lt;= 5) {          <span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Condici'on </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+  printf(<span style="color: #2d9574;">"%d "</span>, counter);
+  ++counter;                    <span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Incremento </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
  }
- printf(<span style="color: #CC9393;">"\n"</span>);
+ printf(<span style="color: #2d9574;">"\n"</span>);
 }
 </pre>
 </div>
@@ -927,29 +997,29 @@ La función <code>while</code> realiza el ciclo mientras no se cumpla la condici
 </div>
 </div>
 
-<div id="outline-container-org531d6cd" class="outline-3">
-<h3 id="org531d6cd"><span class="section-number-3">2.6</span> do/while</h3>
-<div class="outline-text-3" id="text-2-6">
+<div id="outline-container-orgcecda3c" class="outline-3">
+<h3 id="orgcecda3c"><span class="section-number-3">3.6</span> do/while</h3>
+<div class="outline-text-3" id="text-3-6">
 <p>
 El ciclo <code>do/while</code>  es similar al <code>while</code>, pero cambia la estructura.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-C" id="org6c2bba9"><span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">Uso de la estructura do/while  </span><span style="color: #5F7F5F;">*/</span>
-<span style="color: #94BFF3;">#include</span> <span style="color: #CC9393;">&lt;stdio.h&gt;</span>
+<pre class="src src-C" id="org2d29d8b"><span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Uso de la estructura do/while  </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdio.h&gt;</span>
 
-<span style="color: #7CB8BB;">int</span> <span style="color: #93E0E3;">main</span>( )
+<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">main</span>( )
 {
-  <span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">counter</span> = 1;
+  <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">counter</span> = 1;
 
-  <span style="color: #F0DFAF; font-weight: bold;">do</span>
+  <span style="color: #3a81c3; font-weight: bold;">do</span>
     {
-      printf(<span style="color: #CC9393;">"%d  "</span>, counter);
-    } <span style="color: #F0DFAF; font-weight: bold;">while</span> (++counter &lt;= 5);
+      printf(<span style="color: #2d9574;">"%d  "</span>, counter);
+    } <span style="color: #3a81c3; font-weight: bold;">while</span> (++counter &lt;= 5);
 
- printf(<span style="color: #CC9393;">"\n"</span>);
+ printf(<span style="color: #2d9574;">"\n"</span>);
 
-  <span style="color: #F0DFAF; font-weight: bold;">return</span> 0;
+  <span style="color: #3a81c3; font-weight: bold;">return</span> 0;
 }
 </pre>
 </div>
@@ -961,30 +1031,30 @@ El ciclo <code>do/while</code>  es similar al <code>while</code>, pero cambia la
 </div>
 </div>
 
-<div id="outline-container-orgf919f60" class="outline-3">
-<h3 id="orgf919f60"><span class="section-number-3">2.7</span> break</h3>
-<div class="outline-text-3" id="text-2-7">
+<div id="outline-container-org7b4139c" class="outline-3">
+<h3 id="org7b4139c"><span class="section-number-3">3.7</span> break</h3>
+<div class="outline-text-3" id="text-3-7">
 <p>
 No se recomienda el uso del comando <code>break</code>. Algunos programadores son de la opinión de que <code>break</code> y <code>continue</code> violan las normas de la programación estructurada.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-C" id="org8ef2d07"><span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">Uso de la declaraci'on brake dentro de la estructura </span><span style="color: #5F7F5F;">*/</span>
+<pre class="src src-C" id="orgdcc6ce4"><span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Uso de la declaraci'on brake dentro de la estructura </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
 
-<span style="color: #94BFF3;">#include</span> <span style="color: #CC9393;">&lt;stdio.h&gt;</span>
+<span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdio.h&gt;</span>
 
-<span style="color: #7CB8BB;">int</span> <span style="color: #93E0E3;">main</span>( )
+<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">main</span>( )
 {
-  <span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">x</span>;
+  <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">x</span>;
 
-<span style="color: #F0DFAF; font-weight: bold;">for</span> (x=1; x&lt;=10; x++) {
-  <span style="color: #F0DFAF; font-weight: bold;">if</span> (x == 5)
-    <span style="color: #F0DFAF; font-weight: bold;">break</span>;                      <span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">break loop only if x == 5 </span><span style="color: #5F7F5F;">*/</span>
-  printf(<span style="color: #CC9393;">"%d "</span>, x);
+<span style="color: #3a81c3; font-weight: bold;">for</span> (x=1; x&lt;=10; x++) {
+  <span style="color: #3a81c3; font-weight: bold;">if</span> (x == 5)
+    <span style="color: #3a81c3; font-weight: bold;">break</span>;                      <span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">break loop only if x == 5 </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+  printf(<span style="color: #2d9574;">"%d "</span>, x);
  }
 
- printf(<span style="color: #CC9393;">"\n Salida por break a  x == %d\n"</span>, x);
-  <span style="color: #F0DFAF; font-weight: bold;">return</span> 0;
+ printf(<span style="color: #2d9574;">"\n Salida por break a  x == %d\n"</span>, x);
+  <span style="color: #3a81c3; font-weight: bold;">return</span> 0;
 }
 </pre>
 </div>
@@ -1033,18 +1103,18 @@ No se recomienda el uso del comando <code>break</code>. Algunos programadores so
 </div>
 </div>
 
-<div id="outline-container-orgd5ddb56" class="outline-2">
-<h2 id="orgd5ddb56"><span class="section-number-2">3</span> Funciones</h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-org6aa882a" class="outline-2">
+<h2 id="org6aa882a"><span class="section-number-2">4</span> Funciones</h2>
+<div class="outline-text-2" id="text-4">
 <p>
 Las funciones en <code>C</code> pueden ser declaradas dentro de la función principal, <code>pian</code>, o en un archivo externo y llamado como una biblioteca.
 </p>
 </div>
 
 
-<div id="outline-container-org2605b47" class="outline-3">
-<h3 id="org2605b47"><span class="section-number-3">3.1</span> Declaración de la función dentro del <code>main</code></h3>
-<div class="outline-text-3" id="text-3-1">
+<div id="outline-container-orgf144ca5" class="outline-3">
+<h3 id="orgf144ca5"><span class="section-number-3">4.1</span> Declaración de la función dentro del <code>main</code></h3>
+<div class="outline-text-3" id="text-4-1">
 <p>
 Para utilizar una función dentro de <code>C</code> es necesaria definirla primero. Vamos a definir la función <code>square</code>, que eleva al cuadrado cualquier número entero.
 </p>
@@ -1067,24 +1137,24 @@ Cuando se define la función dentro del <code>main</code> hay que indicar que es
 
 
 <div class="org-src-container">
-<pre class="src src-C" id="orga3910c3"><span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">gcc -o square -square.c </span><span style="color: #5F7F5F;">*/</span>
-<span style="color: #94BFF3;">#include</span> <span style="color: #CC9393;">&lt;stdio.h&gt;</span>
+<pre class="src src-C" id="org37abbd3"><span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">gcc -o square -square.c </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdio.h&gt;</span>
 
-<span style="color: #7CB8BB;">int</span> <span style="color: #93E0E3;">square</span>(<span style="color: #7CB8BB;">int</span>);
+<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">square</span>(<span style="color: #ba2f59; font-weight: bold;">int</span>);
 
-<span style="color: #7CB8BB;">int</span> <span style="color: #93E0E3;">main</span>( ) {
-  <span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">x</span>;
+<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">main</span>( ) {
+  <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">x</span>;
 
-  <span style="color: #F0DFAF; font-weight: bold;">for</span> (x=1; x &lt;= 10; x++)
-    printf(<span style="color: #CC9393;">"%d "</span>, square(x));
+  <span style="color: #3a81c3; font-weight: bold;">for</span> (x=1; x &lt;= 10; x++)
+    printf(<span style="color: #2d9574;">"%d "</span>, square(x));
 
-  printf(<span style="color: #CC9393;">"\n"</span>);
-  <span style="color: #F0DFAF; font-weight: bold;">return</span> 0;
+  printf(<span style="color: #2d9574;">"\n"</span>);
+  <span style="color: #3a81c3; font-weight: bold;">return</span> 0;
 }
 
-<span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">Definici'on de la funci'on </span><span style="color: #5F7F5F;">*/</span>
-<span style="color: #7CB8BB;">int</span> <span style="color: #93E0E3;">square</span>(<span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">y</span>) {
-  <span style="color: #F0DFAF; font-weight: bold;">return</span> y*y;
+<span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Definici'on de la funci'on </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">square</span>(<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">y</span>) {
+  <span style="color: #3a81c3; font-weight: bold;">return</span> y*y;
 }
 
 </pre>
@@ -1102,16 +1172,16 @@ De esta manera podemos declarar las funciones necesarias dentro de nuestro progr
 </div>
 
 
-<div id="outline-container-orgbf607f3" class="outline-3">
-<h3 id="orgbf607f3"><span class="section-number-3">3.2</span> Declaración de la función en un archivo externo</h3>
-<div class="outline-text-3" id="text-3-2">
+<div id="outline-container-orgb37e808" class="outline-3">
+<h3 id="orgb37e808"><span class="section-number-3">4.2</span> Declaración de la función en un archivo externo</h3>
+<div class="outline-text-3" id="text-4-2">
 <p>
 Cuando el programa es muy grande no conviene definir todas las funciones dentro del <code>main</code>. Una alternativa es generar todas las funciones en un archivo distinto. Por ejemplo, un archivo llamado <code>square.c</code>.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-C"><span style="color: #7CB8BB;">int</span> <span style="color: #93E0E3;">square</span>(<span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">y</span>) {
-<span style="color: #F0DFAF; font-weight: bold;">return</span> y*y;
+<pre class="src src-C"><span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">square</span>(<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">y</span>) {
+<span style="color: #3a81c3; font-weight: bold;">return</span> y*y;
 }
 </pre>
 </div>
@@ -1122,7 +1192,7 @@ También es necesario generar un archivo <code>square.h</code> en donde indicamo
 </p>
 
 <div class="org-src-container">
-<pre class="src src-C"><span style="color: #7CB8BB;">int</span> <span style="color: #93E0E3;">square</span>(<span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">y</span>);
+<pre class="src src-C"><span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">square</span>(<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">y</span>);
 </pre>
 </div>
 
@@ -1138,17 +1208,17 @@ Ahora el archivo principal que contiene el <code>main</code>, que llamaremos <co
 int square(int y);
 </p>
 <div class="org-src-container">
-<pre class="src src-C"><span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">gcc -o mainf mainf.c square.c </span><span style="color: #5F7F5F;">*/</span>
-<span style="color: #94BFF3;">#include</span> <span style="color: #CC9393;">&lt;stdio.h&gt;</span>
-<span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">#include "square.h" </span><span style="color: #5F7F5F;">*/</span>
-<span style="color: #7CB8BB;">int</span> <span style="color: #93E0E3;">main</span>() {
-  <span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">x</span>;
+<pre class="src src-C"><span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">gcc -o mainf mainf.c square.c </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdio.h&gt;</span>
+<span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">#include "square.h" </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">main</span>() {
+  <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">x</span>;
 
-  <span style="color: #F0DFAF; font-weight: bold;">for</span> (x=1; x &lt;= 10; x++)
-    printf(<span style="color: #CC9393;">"%d "</span>, square(x));
+  <span style="color: #3a81c3; font-weight: bold;">for</span> (x=1; x &lt;= 10; x++)
+    printf(<span style="color: #2d9574;">"%d "</span>, square(x));
 
-  printf(<span style="color: #CC9393;">"\n"</span>);
-  <span style="color: #F0DFAF; font-weight: bold;">return</span> 0;
+  printf(<span style="color: #2d9574;">"\n"</span>);
+  <span style="color: #3a81c3; font-weight: bold;">return</span> 0;
 }
 
 </pre>
@@ -1161,9 +1231,9 @@ El resultado es el mismo.
 </div>
 </div>
 
-<div id="outline-container-orga9b9859" class="outline-2">
-<h2 id="orga9b9859"><span class="section-number-2">4</span> Punteros</h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-orge298fa5" class="outline-2">
+<h2 id="orge298fa5"><span class="section-number-2">5</span> Punteros</h2>
+<div class="outline-text-2" id="text-5">
 <p>
 Las operaciones con matrices son quizás la forma más fácil de resolver un problema matemático. En <code>C</code> las matrices no están definidas, pero existen punteros que nos permiten definir arreglos de datos.
 </p>
@@ -1216,18 +1286,18 @@ A continuación se muestra el uso de la función <code>dot</code>.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-C" id="org9ba6f75"><span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">Producto punto </span><span style="color: #5F7F5F;">*/</span>
-<span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">gcc -o dot dot.c </span><span style="color: #5F7F5F;">*/</span>
-<span style="color: #94BFF3;">#include</span> <span style="color: #CC9393;">&lt;stdio.h&gt;</span>
-<span style="color: #94BFF3;">#include</span> <span style="color: #CC9393;">&lt;stdlib.h&gt;</span>
+<pre class="src src-C" id="orgd3ee874"><span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Producto punto </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">gcc -o dot dot.c </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdio.h&gt;</span>
+<span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdlib.h&gt;</span>
 
-<span style="color: #7CB8BB;">double</span> <span style="color: #93E0E3;">dot</span>(<span style="color: #7CB8BB;">double</span> *<span style="color: #DFAF8F;">x</span>, <span style="color: #7CB8BB;">double</span> *<span style="color: #DFAF8F;">y</span>);
+<span style="color: #ba2f59; font-weight: bold;">double</span> <span style="color: #6c3163; font-weight: bold;">dot</span>(<span style="color: #ba2f59; font-weight: bold;">double</span> *<span style="color: #715ab1;">x</span>, <span style="color: #ba2f59; font-weight: bold;">double</span> *<span style="color: #715ab1;">y</span>);
 
-<span style="color: #7CB8BB;">int</span> <span style="color: #93E0E3;">main</span>() {
-  <span style="color: #7CB8BB;">double</span> *<span style="color: #DFAF8F;">x</span>,*<span style="color: #DFAF8F;">y</span>, <span style="color: #DFAF8F;">z</span>;
+<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">main</span>() {
+  <span style="color: #ba2f59; font-weight: bold;">double</span> *<span style="color: #715ab1;">x</span>,*<span style="color: #715ab1;">y</span>, <span style="color: #715ab1;">z</span>;
 
-  x = (<span style="color: #7CB8BB;">double</span> *)calloc(3, <span style="color: #F0DFAF; font-weight: bold;">sizeof</span>(<span style="color: #7CB8BB;">double</span>));
-  y = (<span style="color: #7CB8BB;">double</span> *)calloc(3, <span style="color: #F0DFAF; font-weight: bold;">sizeof</span>(<span style="color: #7CB8BB;">double</span>));
+  x = (<span style="color: #ba2f59; font-weight: bold;">double</span> *)calloc(3, <span style="color: #3a81c3; font-weight: bold;">sizeof</span>(<span style="color: #ba2f59; font-weight: bold;">double</span>));
+  y = (<span style="color: #ba2f59; font-weight: bold;">double</span> *)calloc(3, <span style="color: #3a81c3; font-weight: bold;">sizeof</span>(<span style="color: #ba2f59; font-weight: bold;">double</span>));
 
   x[0] = 1;
   x[1] = 2;
@@ -1239,20 +1309,20 @@ A continuación se muestra el uso de la función <code>dot</code>.
 
   z= dot(x,y);
 
-  printf(<span style="color: #CC9393;">"z = %.2f\n"</span>, z);
+  printf(<span style="color: #2d9574;">"z = %.2f\n"</span>, z);
 
-  <span style="color: #F0DFAF; font-weight: bold;">return</span> 0;
+  <span style="color: #3a81c3; font-weight: bold;">return</span> 0;
 }
 
 
-<span style="color: #7CB8BB;">double</span> <span style="color: #93E0E3;">dot</span>(<span style="color: #7CB8BB;">double</span> *<span style="color: #DFAF8F;">x</span>, <span style="color: #7CB8BB;">double</span> *<span style="color: #DFAF8F;">y</span>){
-  <span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">i</span>;
-  <span style="color: #7CB8BB;">double</span> <span style="color: #DFAF8F;">z</span>;
+<span style="color: #ba2f59; font-weight: bold;">double</span> <span style="color: #6c3163; font-weight: bold;">dot</span>(<span style="color: #ba2f59; font-weight: bold;">double</span> *<span style="color: #715ab1;">x</span>, <span style="color: #ba2f59; font-weight: bold;">double</span> *<span style="color: #715ab1;">y</span>){
+  <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">i</span>;
+  <span style="color: #ba2f59; font-weight: bold;">double</span> <span style="color: #715ab1;">z</span>;
 
-  <span style="color: #F0DFAF; font-weight: bold;">for</span> (i = 0; i &lt; 3; i++)
+  <span style="color: #3a81c3; font-weight: bold;">for</span> (i = 0; i &lt; 3; i++)
     z += x[i]*y[i];
 
-  <span style="color: #F0DFAF; font-weight: bold;">return</span> z;
+  <span style="color: #3a81c3; font-weight: bold;">return</span> z;
 }
 </pre>
 </div>
@@ -1263,9 +1333,9 @@ Para definir un punteros puntero primero declaramos la variable en este caso <co
 </div>
 </div>
 
-<div id="outline-container-orgb327b30" class="outline-2">
-<h2 id="orgb327b30"><span class="section-number-2">5</span> Leer datos de entrada desde la terminal</h2>
-<div class="outline-text-2" id="text-5">
+<div id="outline-container-org723e8dd" class="outline-2">
+<h2 id="org723e8dd"><span class="section-number-2">6</span> Leer datos de entrada desde la terminal</h2>
+<div class="outline-text-2" id="text-6">
 <p>
 Previamente se había comentado que no era tan eficiente leer datos con <code>scanf</code>, y es que es posible ingresar datos directamente desde la terminal, al ejecutar el programa.
 </p>
@@ -1283,20 +1353,20 @@ A continuación se muestra el programa <code>readT.c</code> que pude leer los da
 </p>
 
 <div class="org-src-container">
-<pre class="src src-C" id="orga46505e"><span style="color: #94BFF3;">#include</span> <span style="color: #CC9393;">&lt;stdio.h&gt;</span>
-<span style="color: #94BFF3;">#include</span> <span style="color: #CC9393;">&lt;stdlib.h&gt;</span>
+<pre class="src src-C" id="orgc5a29dd"><span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdio.h&gt;</span>
+<span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdlib.h&gt;</span>
 
-<span style="color: #7CB8BB;">int</span> <span style="color: #93E0E3;">main</span>(<span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">argc</span>, <span style="color: #7CB8BB;">char</span> *<span style="color: #DFAF8F;">argv</span>[]) {
-  <span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">n</span>;
-  <span style="color: #7CB8BB;">double</span> <span style="color: #DFAF8F;">x</span>;
+<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">main</span>(<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">argc</span>, <span style="color: #ba2f59; font-weight: bold;">char</span> *<span style="color: #715ab1;">argv</span>[]) {
+  <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">n</span>;
+  <span style="color: #ba2f59; font-weight: bold;">double</span> <span style="color: #715ab1;">x</span>;
 
   n = atoi(argv[1]);
-  printf(<span style="color: #CC9393;">"%d\n"</span>, n);
+  printf(<span style="color: #2d9574;">"%d\n"</span>, n);
 
   x = atof(argv[2]);
-  printf(<span style="color: #CC9393;">"%f\n"</span>, x);
+  printf(<span style="color: #2d9574;">"%f\n"</span>, x);
 
-  <span style="color: #F0DFAF; font-weight: bold;">return</span> 0;
+  <span style="color: #3a81c3; font-weight: bold;">return</span> 0;
 }
 </pre>
 </div>
@@ -1306,7 +1376,7 @@ Dentro del <code>main</code> se le indica que existirán argumentos sobre la lin
 </p>
 
 <div class="org-src-container">
-<pre class="src src-shell"><span style="color: #5F7F5F;">#</span><span style="color: #7F9F7F;">!/usr/bin/</span><span style="color: #F0DFAF; font-weight: bold;">env</span><span style="color: #7F9F7F;"> bash</span>
+<pre class="src src-shell"><span style="color: #2aa1ae; background-color: #ecf3ec;">#</span><span style="color: #2aa1ae; background-color: #ecf3ec;">!/usr/bin/</span><span style="color: #3a81c3; font-weight: bold;">env</span><span style="color: #2aa1ae; background-color: #ecf3ec;"> bash</span>
 ./readT 4 3.5
 </pre>
 </div>
@@ -1317,9 +1387,9 @@ Este tipo de ejecutables son muy útiles, pues fácilmente pueden cambiarse las 
 </div>
 </div>
 
-<div id="outline-container-org223b40f" class="outline-2">
-<h2 id="org223b40f"><span class="section-number-2">6</span> Guardar datos de salida en archivo</h2>
-<div class="outline-text-2" id="text-6">
+<div id="outline-container-org4e8beba" class="outline-2">
+<h2 id="org4e8beba"><span class="section-number-2">7</span> Guardar datos de salida en archivo</h2>
+<div class="outline-text-2" id="text-7">
 <p>
 Ahora vamos a hacer un programa más elaborado, en el cual utilizaremos una nueva función llamada <code>fprintf</code>, la cual nos permite enviar la información a un archivo.
 </p>
@@ -1358,52 +1428,52 @@ Donde \(N\) es el día del año, y \(E(B)\) esta en minutos.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-C" id="orga394d14"><span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">ggc -o EdT EdT.c </span><span style="color: #5F7F5F;">*/</span>
-<span style="color: #94BFF3;">  #include</span> <span style="color: #CC9393;">&lt;stdio.h&gt;</span>
-<span style="color: #94BFF3;">  #include</span> <span style="color: #CC9393;">&lt;math.h&gt;</span>
+<pre class="src src-C" id="org8b30e3d"><span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">ggc -o EdT EdT.c </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<span style="color: #6c3163;">  #include</span> <span style="color: #2d9574;">&lt;stdio.h&gt;</span>
+<span style="color: #6c3163;">  #include</span> <span style="color: #2d9574;">&lt;math.h&gt;</span>
 
-<span style="color: #94BFF3;">  #define</span> <span style="color: #DFAF8F;">PI</span> 3.1415926535897932384626433832795028841971
+<span style="color: #6c3163;">  #define</span> <span style="color: #715ab1;">PI</span> 3.1415926535897932384626433832795028841971
 
-  <span style="color: #7CB8BB;">double</span> <span style="color: #93E0E3;">_B</span>(<span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">N</span>);
-  <span style="color: #7CB8BB;">double</span> <span style="color: #93E0E3;">d2r</span>(<span style="color: #7CB8BB;">double</span> <span style="color: #DFAF8F;">grados</span>);
-  <span style="color: #7CB8BB;">double</span> <span style="color: #93E0E3;">r2d</span>(<span style="color: #7CB8BB;">double</span> <span style="color: #DFAF8F;">radianes</span>);
-  <span style="color: #7CB8BB;">double</span> <span style="color: #93E0E3;">EdT</span>(<span style="color: #7CB8BB;">double</span> <span style="color: #DFAF8F;">B</span>);
+  <span style="color: #ba2f59; font-weight: bold;">double</span> <span style="color: #6c3163; font-weight: bold;">_B</span>(<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">N</span>);
+  <span style="color: #ba2f59; font-weight: bold;">double</span> <span style="color: #6c3163; font-weight: bold;">d2r</span>(<span style="color: #ba2f59; font-weight: bold;">double</span> <span style="color: #715ab1;">grados</span>);
+  <span style="color: #ba2f59; font-weight: bold;">double</span> <span style="color: #6c3163; font-weight: bold;">r2d</span>(<span style="color: #ba2f59; font-weight: bold;">double</span> <span style="color: #715ab1;">radianes</span>);
+  <span style="color: #ba2f59; font-weight: bold;">double</span> <span style="color: #6c3163; font-weight: bold;">EdT</span>(<span style="color: #ba2f59; font-weight: bold;">double</span> <span style="color: #715ab1;">B</span>);
 
-  <span style="color: #7CB8BB;">int</span> <span style="color: #93E0E3;">main</span>(<span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">argc</span>, <span style="color: #7CB8BB;">char</span> *<span style="color: #DFAF8F;">argv</span>[])
+  <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">main</span>(<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">argc</span>, <span style="color: #ba2f59; font-weight: bold;">char</span> *<span style="color: #715ab1;">argv</span>[])
   {
-    <span style="color: #7CB8BB;">char</span> <span style="color: #DFAF8F;">s_file</span>[80];
-    <span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">N</span>;
-    <span style="color: #7CB8BB;">double</span> <span style="color: #DFAF8F;">B</span>;
-    <span style="color: #7CB8BB;">FILE</span> *<span style="color: #DFAF8F;">f</span>;
+    <span style="color: #ba2f59; font-weight: bold;">char</span> <span style="color: #715ab1;">s_file</span>[80];
+    <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">N</span>;
+    <span style="color: #ba2f59; font-weight: bold;">double</span> <span style="color: #715ab1;">B</span>;
+    <span style="color: #ba2f59; font-weight: bold;">FILE</span> *<span style="color: #715ab1;">f</span>;
 
-    sprintf(s_file, <span style="color: #CC9393;">"EdT.dat"</span>);
-    f = fopen(s_file, <span style="color: #CC9393;">"w"</span>);
-    <span style="color: #F0DFAF; font-weight: bold;">for</span> (N = 0; N &lt; 365; N++) {
+    sprintf(s_file, <span style="color: #2d9574;">"EdT.dat"</span>);
+    f = fopen(s_file, <span style="color: #2d9574;">"w"</span>);
+    <span style="color: #3a81c3; font-weight: bold;">for</span> (N = 0; N &lt; 365; N++) {
       B = _B(N);
-      fprintf(f, <span style="color: #CC9393;">"%d\t%f\n"</span>, N, EdT(B));
+      fprintf(f, <span style="color: #2d9574;">"%d\t%f\n"</span>, N, EdT(B));
     }
-    <span style="color: #F0DFAF; font-weight: bold;">return</span> 0;
+    <span style="color: #3a81c3; font-weight: bold;">return</span> 0;
   }
 
-  <span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">Funciones basicas </span><span style="color: #5F7F5F;">*/</span>
-  <span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">------------------------------------------------------------------- </span><span style="color: #5F7F5F;">*/</span>
-  <span style="color: #7CB8BB;">double</span> <span style="color: #93E0E3;">_B</span>(<span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">N</span>){
-    <span style="color: #F0DFAF; font-weight: bold;">return</span> 2.0*PI*(N-1)/365.0;  <span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">radianes </span><span style="color: #5F7F5F;">*/</span>
+  <span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Funciones basicas </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+  <span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">------------------------------------------------------------------- </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+  <span style="color: #ba2f59; font-weight: bold;">double</span> <span style="color: #6c3163; font-weight: bold;">_B</span>(<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">N</span>){
+    <span style="color: #3a81c3; font-weight: bold;">return</span> 2.0*PI*(N-1)/365.0;  <span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">radianes </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
   }
 
-  <span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">radianes a grados </span><span style="color: #5F7F5F;">*/</span>
-  <span style="color: #7CB8BB;">double</span> <span style="color: #93E0E3;">r2d</span>(<span style="color: #7CB8BB;">double</span> <span style="color: #DFAF8F;">radianes</span>){
-    <span style="color: #F0DFAF; font-weight: bold;">return</span> (180.0/PI)*radianes;
+  <span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">radianes a grados </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+  <span style="color: #ba2f59; font-weight: bold;">double</span> <span style="color: #6c3163; font-weight: bold;">r2d</span>(<span style="color: #ba2f59; font-weight: bold;">double</span> <span style="color: #715ab1;">radianes</span>){
+    <span style="color: #3a81c3; font-weight: bold;">return</span> (180.0/PI)*radianes;
   }
 
-  <span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">grados a radianes </span><span style="color: #5F7F5F;">*/</span>
-  <span style="color: #7CB8BB;">double</span> <span style="color: #93E0E3;">d2r</span>(<span style="color: #7CB8BB;">double</span> <span style="color: #DFAF8F;">grados</span>){
-    <span style="color: #F0DFAF; font-weight: bold;">return</span> (PI/180.0)*grados;
+  <span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">grados a radianes </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+  <span style="color: #ba2f59; font-weight: bold;">double</span> <span style="color: #6c3163; font-weight: bold;">d2r</span>(<span style="color: #ba2f59; font-weight: bold;">double</span> <span style="color: #715ab1;">grados</span>){
+    <span style="color: #3a81c3; font-weight: bold;">return</span> (PI/180.0)*grados;
   }
 
-  <span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">Ecuaci&#243;n del tiempo [minutos] </span><span style="color: #5F7F5F;">*/</span>
-  <span style="color: #7CB8BB;">double</span> <span style="color: #93E0E3;">EdT</span>(<span style="color: #7CB8BB;">double</span> <span style="color: #DFAF8F;">B</span>){
-    <span style="color: #F0DFAF; font-weight: bold;">return</span> 229.2 * (0.000075 + 0.001868*cos(B) \
+  <span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Ecuaci&#243;n del tiempo [minutos] </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+  <span style="color: #ba2f59; font-weight: bold;">double</span> <span style="color: #6c3163; font-weight: bold;">EdT</span>(<span style="color: #ba2f59; font-weight: bold;">double</span> <span style="color: #715ab1;">B</span>){
+    <span style="color: #3a81c3; font-weight: bold;">return</span> 229.2 * (0.000075 + 0.001868*cos(B) \
 -0.032077*sin(B) - 0.014615*cos(2*B) - 0.04089*sin(2*B));
   }
 </pre>
@@ -1486,17 +1556,17 @@ A continuación se muestra parte de los resultados del archivo <code>EdT.dat</co
 
 
 
-<div id="outline-container-orgcec9c0e" class="outline-2">
-<h2 id="orgcec9c0e"><span class="section-number-2">7</span> Leer un archivo de datos</h2>
+<div id="outline-container-org6d4b723" class="outline-2">
+<h2 id="org6d4b723"><span class="section-number-2">8</span> Leer un archivo de datos</h2>
 </div>
 
-<div id="outline-container-orgc6998f7" class="outline-2">
-<h2 id="orgc6998f7"><span class="section-number-2">8</span> Reciclando código</h2>
+<div id="outline-container-org250429e" class="outline-2">
+<h2 id="org250429e"><span class="section-number-2">9</span> Reciclando código</h2>
 </div>
 
-<div id="outline-container-orgd12f35e" class="outline-2">
-<h2 id="orgd12f35e"><span class="section-number-2">9</span> Makefile</h2>
-<div class="outline-text-2" id="text-9">
+<div id="outline-container-orge98bd41" class="outline-2">
+<h2 id="orge98bd41"><span class="section-number-2">10</span> Makefile</h2>
+<div class="outline-text-2" id="text-10">
 <p>
 Los archivos <code>Makefile</code> son útiles cuando se tiene una gran cantidad de bibliotecas locales. 
 </p>
@@ -1504,201 +1574,201 @@ Los archivos <code>Makefile</code> son útiles cuando se tiene una gran cantidad
 </div>
 
 
-<div id="outline-container-orgcfa2d24" class="outline-2">
-<h2 id="orgcfa2d24"><span class="section-number-2">10</span> Funciones gsl</h2>
+<div id="outline-container-org84f8607" class="outline-2">
+<h2 id="org84f8607"><span class="section-number-2">11</span> Funciones gsl</h2>
 </div>
 
-<div id="outline-container-org20357d3" class="outline-2">
-<h2 id="org20357d3"><span class="section-number-2">11</span> Funciones básicas</h2>
-<div class="outline-text-2" id="text-11">
+<div id="outline-container-org90d854c" class="outline-2">
+<h2 id="org90d854c"><span class="section-number-2">12</span> Funciones básicas</h2>
+<div class="outline-text-2" id="text-12">
 <p>
 Para una buena programación es necesarío tener una buena base de funciones programadas
 </p>
 </div>
 
-<div id="outline-container-org8db7c65" class="outline-3">
-<h3 id="org8db7c65"><span class="section-number-3">11.1</span> Base</h3>
-<div class="outline-text-3" id="text-11-1">
+<div id="outline-container-org5ffb053" class="outline-3">
+<h3 id="org5ffb053"><span class="section-number-3">12.1</span> Base</h3>
+<div class="outline-text-3" id="text-12-1">
 <p>
 El archivo <code>base.c/base.h</code> contiene una algunas funciones básicas de uso común en todos los programas.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-C" id="org374c412"><span style="color: #94BFF3;">#include</span> <span style="color: #CC9393;">&lt;stdio.h&gt;</span>
+<pre class="src src-C" id="orgb70aeb4"><span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdio.h&gt;</span>
 
-<span style="color: #94BFF3;">#define</span> <span style="color: #DFAF8F;">PI</span>    3.1415926535897932384626433832795028841971
+<span style="color: #6c3163;">#define</span> <span style="color: #715ab1;">PI</span>    3.1415926535897932384626433832795028841971
 
-<span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">Grados a radianes </span><span style="color: #5F7F5F;">*/</span>
-<span style="color: #94BFF3;">#define</span> <span style="color: #93E0E3;">D2R</span>(<span style="color: #DFAF8F;">grados</span>) (grados * PI/180.0)
-<span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">Radianes a grados </span><span style="color: #5F7F5F;">*/</span>
-<span style="color: #94BFF3;">#define</span> <span style="color: #93E0E3;">R2D</span>(<span style="color: #DFAF8F;">radianes</span>) (<span style="color: #7CB8BB;">radianes</span> * 180.0/PI)
-<span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">Regresa el signo -1, 1 o 0 </span><span style="color: #5F7F5F;">*/</span>
-<span style="color: #94BFF3;">#define</span> <span style="color: #93E0E3;">SIGN</span>(<span style="color: #DFAF8F;">X</span>) ((X &gt; 0) - (X &lt; 0))
+<span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Grados a radianes </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<span style="color: #6c3163;">#define</span> <span style="color: #6c3163; font-weight: bold;">D2R</span>(<span style="color: #715ab1;">grados</span>) (grados * PI/180.0)
+<span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Radianes a grados </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<span style="color: #6c3163;">#define</span> <span style="color: #6c3163; font-weight: bold;">R2D</span>(<span style="color: #715ab1;">radianes</span>) (<span style="color: #ba2f59; font-weight: bold;">radianes</span> * 180.0/PI)
+<span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Regresa el signo -1, 1 o 0 </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<span style="color: #6c3163;">#define</span> <span style="color: #6c3163; font-weight: bold;">SIGN</span>(<span style="color: #715ab1;">X</span>) ((X &gt; 0) - (X &lt; 0))
 
-<span style="color: #94BFF3;">#define</span> <span style="color: #93E0E3;">MIN</span>(<span style="color: #DFAF8F;">a</span>,<span style="color: #DFAF8F;">b</span>) (((a)&lt;(b))?(a):(b))
-<span style="color: #94BFF3;">#define</span> <span style="color: #93E0E3;">MAX</span>(<span style="color: #DFAF8F;">a</span>,<span style="color: #DFAF8F;">b</span>) (((a)&gt;(b))?(a):(b))
+<span style="color: #6c3163;">#define</span> <span style="color: #6c3163; font-weight: bold;">MIN</span>(<span style="color: #715ab1;">a</span>,<span style="color: #715ab1;">b</span>) (((a)&lt;(b))?(a):(b))
+<span style="color: #6c3163;">#define</span> <span style="color: #6c3163; font-weight: bold;">MAX</span>(<span style="color: #715ab1;">a</span>,<span style="color: #715ab1;">b</span>) (((a)&gt;(b))?(a):(b))
 
-<span style="color: #7CB8BB;">int</span> *<span style="color: #93E0E3;">one_d_int_array</span>(<span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">n</span>);
-<span style="color: #7CB8BB;">int</span> **<span style="color: #93E0E3;">two_d_int_array</span>(<span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">lx</span>, <span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">ly</span>);
-<span style="color: #7CB8BB;">double</span> *<span style="color: #93E0E3;">one_d_double_array</span>(<span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">n</span>);
-<span style="color: #7CB8BB;">double</span> **<span style="color: #93E0E3;">two_d_double_array</span>(<span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">lx</span>, <span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">ly</span>);
-<span style="color: #7CB8BB;">double</span> ***<span style="color: #93E0E3;">three_d_double_array</span>(<span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">lx</span>, <span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">ly</span>, <span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">lz</span>);
+<span style="color: #ba2f59; font-weight: bold;">int</span> *<span style="color: #6c3163; font-weight: bold;">one_d_int_array</span>(<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">n</span>);
+<span style="color: #ba2f59; font-weight: bold;">int</span> **<span style="color: #6c3163; font-weight: bold;">two_d_int_array</span>(<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">lx</span>, <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">ly</span>);
+<span style="color: #ba2f59; font-weight: bold;">double</span> *<span style="color: #6c3163; font-weight: bold;">one_d_double_array</span>(<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">n</span>);
+<span style="color: #ba2f59; font-weight: bold;">double</span> **<span style="color: #6c3163; font-weight: bold;">two_d_double_array</span>(<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">lx</span>, <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">ly</span>);
+<span style="color: #ba2f59; font-weight: bold;">double</span> ***<span style="color: #6c3163; font-weight: bold;">three_d_double_array</span>(<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">lx</span>, <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">ly</span>, <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">lz</span>);
 
-<span style="color: #7CB8BB;">void</span> <span style="color: #93E0E3;">free_two_d_int_array</span>(<span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">n</span>,<span style="color: #7CB8BB;">int</span> **<span style="color: #DFAF8F;">s</span>);
-<span style="color: #7CB8BB;">void</span> <span style="color: #93E0E3;">free_two_d_double_array</span>(<span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">n</span>,<span style="color: #7CB8BB;">double</span> **<span style="color: #DFAF8F;">s</span>);
-<span style="color: #7CB8BB;">void</span> <span style="color: #93E0E3;">free_three_d_double_array</span>(<span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">lx</span>, <span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">ly</span>, <span style="color: #7CB8BB;">double</span> ***<span style="color: #DFAF8F;">s</span>);
+<span style="color: #ba2f59; font-weight: bold;">void</span> <span style="color: #6c3163; font-weight: bold;">free_two_d_int_array</span>(<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">n</span>,<span style="color: #ba2f59; font-weight: bold;">int</span> **<span style="color: #715ab1;">s</span>);
+<span style="color: #ba2f59; font-weight: bold;">void</span> <span style="color: #6c3163; font-weight: bold;">free_two_d_double_array</span>(<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">n</span>,<span style="color: #ba2f59; font-weight: bold;">double</span> **<span style="color: #715ab1;">s</span>);
+<span style="color: #ba2f59; font-weight: bold;">void</span> <span style="color: #6c3163; font-weight: bold;">free_three_d_double_array</span>(<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">lx</span>, <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">ly</span>, <span style="color: #ba2f59; font-weight: bold;">double</span> ***<span style="color: #715ab1;">s</span>);
 
-<span style="color: #7CB8BB;">double</span> <span style="color: #93E0E3;">rtimer</span>();
-<span style="color: #7CB8BB;">double</span> <span style="color: #93E0E3;">minut_cpu</span>();
+<span style="color: #ba2f59; font-weight: bold;">double</span> <span style="color: #6c3163; font-weight: bold;">rtimer</span>();
+<span style="color: #ba2f59; font-weight: bold;">double</span> <span style="color: #6c3163; font-weight: bold;">minut_cpu</span>();
 
-<span style="color: #7CB8BB;">void</span> <span style="color: #93E0E3;">_make_file_name</span>(<span style="color: #7CB8BB;">char</span> <span style="color: #DFAF8F;">s_aux</span>[20],<span style="color: #7CB8BB;">char</span> <span style="color: #DFAF8F;">s_base</span>[80],<span style="color: #7CB8BB;">char</span> <span style="color: #DFAF8F;">s_pars</span>[150],\
-                     <span style="color: #7CB8BB;">char</span> <span style="color: #DFAF8F;">s_term</span>[20],<span style="color: #7CB8BB;">char</span> *<span style="color: #DFAF8F;">s_file</span>);
+<span style="color: #ba2f59; font-weight: bold;">void</span> <span style="color: #6c3163; font-weight: bold;">_make_file_name</span>(<span style="color: #ba2f59; font-weight: bold;">char</span> <span style="color: #715ab1;">s_aux</span>[20],<span style="color: #ba2f59; font-weight: bold;">char</span> <span style="color: #715ab1;">s_base</span>[80],<span style="color: #ba2f59; font-weight: bold;">char</span> <span style="color: #715ab1;">s_pars</span>[150],\
+                     <span style="color: #ba2f59; font-weight: bold;">char</span> <span style="color: #715ab1;">s_term</span>[20],<span style="color: #ba2f59; font-weight: bold;">char</span> *<span style="color: #715ab1;">s_file</span>);
 
-<span style="color: #7CB8BB;">double</span> <span style="color: #93E0E3;">lineCount</span>(<span style="color: #7CB8BB;">FILE</span> *<span style="color: #DFAF8F;">f</span>);
+<span style="color: #ba2f59; font-weight: bold;">double</span> <span style="color: #6c3163; font-weight: bold;">lineCount</span>(<span style="color: #ba2f59; font-weight: bold;">FILE</span> *<span style="color: #715ab1;">f</span>);
 </pre>
 </div>
 
 <div class="org-src-container">
-<pre class="src src-C" id="org14877ab"><span style="color: #94BFF3;">#include</span> <span style="color: #CC9393;">&lt;stdio.h&gt;</span>
-<span style="color: #94BFF3;">#include</span> <span style="color: #CC9393;">&lt;stdlib.h&gt;</span>
-<span style="color: #94BFF3;">#include</span> <span style="color: #CC9393;">&lt;string.h&gt;</span>
-<span style="color: #94BFF3;">#include</span> <span style="color: #CC9393;">&lt;math.h&gt;</span>
-<span style="color: #94BFF3;">#include</span> <span style="color: #CC9393;">&lt;time.h&gt;</span>
+<pre class="src src-C" id="org0d4ac8b"><span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdio.h&gt;</span>
+<span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdlib.h&gt;</span>
+<span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;string.h&gt;</span>
+<span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;math.h&gt;</span>
+<span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;time.h&gt;</span>
 
-<span style="color: #94BFF3;">#define</span> <span style="color: #DFAF8F;">PI</span>    3.1415926535897932384626433832795028841971
+<span style="color: #6c3163;">#define</span> <span style="color: #715ab1;">PI</span>    3.1415926535897932384626433832795028841971
 
-<span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">---------------------------------------------------------------------- </span><span style="color: #5F7F5F;">*/</span>
-<span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">Arreglos </span><span style="color: #5F7F5F;">*/</span>
-<span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">---------------------------------------------------------------------- </span><span style="color: #5F7F5F;">*/</span>
-<span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">1D int </span><span style="color: #5F7F5F;">*/</span>
-<span style="color: #7CB8BB;">int</span> *<span style="color: #93E0E3;">one_d_int_array</span>(<span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">n</span>) {
-  <span style="color: #7CB8BB;">int</span> *<span style="color: #DFAF8F;">ptr</span>;
+<span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">---------------------------------------------------------------------- </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Arreglos </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">---------------------------------------------------------------------- </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">1D int </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<span style="color: #ba2f59; font-weight: bold;">int</span> *<span style="color: #6c3163; font-weight: bold;">one_d_int_array</span>(<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">n</span>) {
+  <span style="color: #ba2f59; font-weight: bold;">int</span> *<span style="color: #715ab1;">ptr</span>;
 
-  ptr = (<span style="color: #7CB8BB;">int</span> *) calloc(n,<span style="color: #F0DFAF; font-weight: bold;">sizeof</span>(<span style="color: #7CB8BB;">int</span>));
-  <span style="color: #F0DFAF; font-weight: bold;">return</span> ptr;
+  ptr = (<span style="color: #ba2f59; font-weight: bold;">int</span> *) calloc(n,<span style="color: #3a81c3; font-weight: bold;">sizeof</span>(<span style="color: #ba2f59; font-weight: bold;">int</span>));
+  <span style="color: #3a81c3; font-weight: bold;">return</span> ptr;
 }
 
-<span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">2D int </span><span style="color: #5F7F5F;">*/</span>
-<span style="color: #7CB8BB;">int</span> **<span style="color: #93E0E3;">two_d_int_array</span>(<span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">lx</span>, <span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">ly</span>) {
-  <span style="color: #7CB8BB;">int</span> **<span style="color: #DFAF8F;">ptr</span>, <span style="color: #DFAF8F;">i</span>; 
+<span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">2D int </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<span style="color: #ba2f59; font-weight: bold;">int</span> **<span style="color: #6c3163; font-weight: bold;">two_d_int_array</span>(<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">lx</span>, <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">ly</span>) {
+  <span style="color: #ba2f59; font-weight: bold;">int</span> **<span style="color: #715ab1;">ptr</span>, <span style="color: #715ab1;">i</span>; 
 
-  ptr = (<span style="color: #7CB8BB;">int</span> **) calloc(lx,<span style="color: #F0DFAF; font-weight: bold;">sizeof</span>(<span style="color: #7CB8BB;">int</span>*));
-  <span style="color: #F0DFAF; font-weight: bold;">for</span>(i=0;i&lt;lx;++i) 
-    ptr[i] = (<span style="color: #7CB8BB;">int</span> *) calloc(ly,<span style="color: #F0DFAF; font-weight: bold;">sizeof</span>(<span style="color: #7CB8BB;">int</span>));
-  <span style="color: #F0DFAF; font-weight: bold;">return</span> ptr;
+  ptr = (<span style="color: #ba2f59; font-weight: bold;">int</span> **) calloc(lx,<span style="color: #3a81c3; font-weight: bold;">sizeof</span>(<span style="color: #ba2f59; font-weight: bold;">int</span>*));
+  <span style="color: #3a81c3; font-weight: bold;">for</span>(i=0;i&lt;lx;++i) 
+    ptr[i] = (<span style="color: #ba2f59; font-weight: bold;">int</span> *) calloc(ly,<span style="color: #3a81c3; font-weight: bold;">sizeof</span>(<span style="color: #ba2f59; font-weight: bold;">int</span>));
+  <span style="color: #3a81c3; font-weight: bold;">return</span> ptr;
 }
 
-<span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">1D double </span><span style="color: #5F7F5F;">*/</span>
-<span style="color: #7CB8BB;">double</span> *<span style="color: #93E0E3;">one_d_double_array</span>(<span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">n</span>) {
-  <span style="color: #7CB8BB;">double</span> *<span style="color: #DFAF8F;">ptr</span>;
+<span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">1D double </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<span style="color: #ba2f59; font-weight: bold;">double</span> *<span style="color: #6c3163; font-weight: bold;">one_d_double_array</span>(<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">n</span>) {
+  <span style="color: #ba2f59; font-weight: bold;">double</span> *<span style="color: #715ab1;">ptr</span>;
 
-  ptr = (<span style="color: #7CB8BB;">double</span> *) calloc(n,<span style="color: #F0DFAF; font-weight: bold;">sizeof</span>(<span style="color: #7CB8BB;">double</span>));
-  <span style="color: #F0DFAF; font-weight: bold;">return</span> ptr;
+  ptr = (<span style="color: #ba2f59; font-weight: bold;">double</span> *) calloc(n,<span style="color: #3a81c3; font-weight: bold;">sizeof</span>(<span style="color: #ba2f59; font-weight: bold;">double</span>));
+  <span style="color: #3a81c3; font-weight: bold;">return</span> ptr;
 }
 
-<span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">2D double </span><span style="color: #5F7F5F;">*/</span>
-<span style="color: #7CB8BB;">double</span> **<span style="color: #93E0E3;">two_d_double_array</span>(<span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">lx</span>, <span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">ly</span>) {
-  <span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">i</span>;
-  <span style="color: #7CB8BB;">double</span>  **<span style="color: #DFAF8F;">ptr</span>;
+<span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">2D double </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<span style="color: #ba2f59; font-weight: bold;">double</span> **<span style="color: #6c3163; font-weight: bold;">two_d_double_array</span>(<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">lx</span>, <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">ly</span>) {
+  <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">i</span>;
+  <span style="color: #ba2f59; font-weight: bold;">double</span>  **<span style="color: #715ab1;">ptr</span>;
 
-  ptr = (<span style="color: #7CB8BB;">double</span> **) calloc(lx,<span style="color: #F0DFAF; font-weight: bold;">sizeof</span>(<span style="color: #7CB8BB;">double</span>*));
-  <span style="color: #F0DFAF; font-weight: bold;">for</span>(i=0;i&lt;lx;++i) 
-    ptr[i] = (<span style="color: #7CB8BB;">double</span>*) calloc(ly,<span style="color: #F0DFAF; font-weight: bold;">sizeof</span>(<span style="color: #7CB8BB;">double</span>));
-  <span style="color: #F0DFAF; font-weight: bold;">return</span> ptr;
+  ptr = (<span style="color: #ba2f59; font-weight: bold;">double</span> **) calloc(lx,<span style="color: #3a81c3; font-weight: bold;">sizeof</span>(<span style="color: #ba2f59; font-weight: bold;">double</span>*));
+  <span style="color: #3a81c3; font-weight: bold;">for</span>(i=0;i&lt;lx;++i) 
+    ptr[i] = (<span style="color: #ba2f59; font-weight: bold;">double</span>*) calloc(ly,<span style="color: #3a81c3; font-weight: bold;">sizeof</span>(<span style="color: #ba2f59; font-weight: bold;">double</span>));
+  <span style="color: #3a81c3; font-weight: bold;">return</span> ptr;
 }
 
-<span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">3D double </span><span style="color: #5F7F5F;">*/</span>
-<span style="color: #7CB8BB;">double</span> ***<span style="color: #93E0E3;">three_d_double_array</span>(<span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">lx</span>, <span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">ly</span>, <span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">lz</span>) {
-  <span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">i</span>,<span style="color: #DFAF8F;">j</span>;
-  <span style="color: #7CB8BB;">double</span> ***<span style="color: #DFAF8F;">ptr</span>;
+<span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">3D double </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<span style="color: #ba2f59; font-weight: bold;">double</span> ***<span style="color: #6c3163; font-weight: bold;">three_d_double_array</span>(<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">lx</span>, <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">ly</span>, <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">lz</span>) {
+  <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">i</span>,<span style="color: #715ab1;">j</span>;
+  <span style="color: #ba2f59; font-weight: bold;">double</span> ***<span style="color: #715ab1;">ptr</span>;
 
-  ptr = (<span style="color: #7CB8BB;">double</span> ***) calloc(lx,<span style="color: #F0DFAF; font-weight: bold;">sizeof</span>(<span style="color: #7CB8BB;">double</span>**));
-  <span style="color: #F0DFAF; font-weight: bold;">for</span>(i=0;i&lt;lx;++i) {
-    ptr[i] = (<span style="color: #7CB8BB;">double</span> **) calloc(ly,<span style="color: #F0DFAF; font-weight: bold;">sizeof</span>(<span style="color: #7CB8BB;">double</span>*));
-    <span style="color: #F0DFAF; font-weight: bold;">for</span>(j=0;j&lt;ly;++j) {
-      ptr[i][j] = (<span style="color: #7CB8BB;">double</span> *) calloc(lz,<span style="color: #F0DFAF; font-weight: bold;">sizeof</span>(<span style="color: #7CB8BB;">double</span>));
+  ptr = (<span style="color: #ba2f59; font-weight: bold;">double</span> ***) calloc(lx,<span style="color: #3a81c3; font-weight: bold;">sizeof</span>(<span style="color: #ba2f59; font-weight: bold;">double</span>**));
+  <span style="color: #3a81c3; font-weight: bold;">for</span>(i=0;i&lt;lx;++i) {
+    ptr[i] = (<span style="color: #ba2f59; font-weight: bold;">double</span> **) calloc(ly,<span style="color: #3a81c3; font-weight: bold;">sizeof</span>(<span style="color: #ba2f59; font-weight: bold;">double</span>*));
+    <span style="color: #3a81c3; font-weight: bold;">for</span>(j=0;j&lt;ly;++j) {
+      ptr[i][j] = (<span style="color: #ba2f59; font-weight: bold;">double</span> *) calloc(lz,<span style="color: #3a81c3; font-weight: bold;">sizeof</span>(<span style="color: #ba2f59; font-weight: bold;">double</span>));
     }
   }
-  <span style="color: #F0DFAF; font-weight: bold;">return</span> ptr;
+  <span style="color: #3a81c3; font-weight: bold;">return</span> ptr;
 }
 
-<span style="color: #7CB8BB;">void</span> <span style="color: #93E0E3;">free_two_d_int_array</span>(<span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">n</span>,<span style="color: #7CB8BB;">int</span> **<span style="color: #DFAF8F;">s</span>) {
-   <span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">i</span>;
+<span style="color: #ba2f59; font-weight: bold;">void</span> <span style="color: #6c3163; font-weight: bold;">free_two_d_int_array</span>(<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">n</span>,<span style="color: #ba2f59; font-weight: bold;">int</span> **<span style="color: #715ab1;">s</span>) {
+   <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">i</span>;
 
-   <span style="color: #F0DFAF; font-weight: bold;">for</span> (i=0;i&lt;n;++i)
+   <span style="color: #3a81c3; font-weight: bold;">for</span> (i=0;i&lt;n;++i)
       free(s[i]);
 }
 
-<span style="color: #7CB8BB;">void</span> <span style="color: #93E0E3;">free_two_d_double_array</span>(<span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">n</span>,<span style="color: #7CB8BB;">double</span> **<span style="color: #DFAF8F;">s</span>) {
-   <span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">i</span>;
+<span style="color: #ba2f59; font-weight: bold;">void</span> <span style="color: #6c3163; font-weight: bold;">free_two_d_double_array</span>(<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">n</span>,<span style="color: #ba2f59; font-weight: bold;">double</span> **<span style="color: #715ab1;">s</span>) {
+   <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">i</span>;
 
-   <span style="color: #F0DFAF; font-weight: bold;">for</span> (i=0;i&lt;n;++i)
+   <span style="color: #3a81c3; font-weight: bold;">for</span> (i=0;i&lt;n;++i)
       free(s[i]);
 }
 
-<span style="color: #7CB8BB;">void</span> <span style="color: #93E0E3;">free_three_d_double_array</span>(<span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">lx</span>, <span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">ly</span>, <span style="color: #7CB8BB;">double</span> ***<span style="color: #DFAF8F;">s</span>) {
-  <span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">i</span>,<span style="color: #DFAF8F;">j</span>;
+<span style="color: #ba2f59; font-weight: bold;">void</span> <span style="color: #6c3163; font-weight: bold;">free_three_d_double_array</span>(<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">lx</span>, <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">ly</span>, <span style="color: #ba2f59; font-weight: bold;">double</span> ***<span style="color: #715ab1;">s</span>) {
+  <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">i</span>,<span style="color: #715ab1;">j</span>;
 
-  <span style="color: #F0DFAF; font-weight: bold;">for</span> (i=0;i&lt;lx;++i) {
-    <span style="color: #F0DFAF; font-weight: bold;">for</span> (j=0;j&lt;ly;++j) {
+  <span style="color: #3a81c3; font-weight: bold;">for</span> (i=0;i&lt;lx;++i) {
+    <span style="color: #3a81c3; font-weight: bold;">for</span> (j=0;j&lt;ly;++j) {
       free(s[i][j]);
     }
     free(s[i]);
   }
 }
 
-<span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">---------------------------------------------------------------------- </span><span style="color: #5F7F5F;">*/</span>
-<span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">Nombre del archivos </span><span style="color: #5F7F5F;">*/</span>
-<span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">---------------------------------------------------------------------- </span><span style="color: #5F7F5F;">*/</span>
-<span style="color: #7CB8BB;">void</span> <span style="color: #93E0E3;">_make_file_name</span>(<span style="color: #7CB8BB;">char</span> <span style="color: #DFAF8F;">s_aux</span>[20],<span style="color: #7CB8BB;">char</span> <span style="color: #DFAF8F;">s_base</span>[80],<span style="color: #7CB8BB;">char</span> <span style="color: #DFAF8F;">s_pars</span>[150],\
-                     <span style="color: #7CB8BB;">char</span> <span style="color: #DFAF8F;">s_term</span>[20],<span style="color: #7CB8BB;">char</span> *<span style="color: #DFAF8F;">s_file</span>){
-  sprintf(s_file,<span style="color: #CC9393;">"%s"</span>,s_base);
+<span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">---------------------------------------------------------------------- </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Nombre del archivos </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">---------------------------------------------------------------------- </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<span style="color: #ba2f59; font-weight: bold;">void</span> <span style="color: #6c3163; font-weight: bold;">_make_file_name</span>(<span style="color: #ba2f59; font-weight: bold;">char</span> <span style="color: #715ab1;">s_aux</span>[20],<span style="color: #ba2f59; font-weight: bold;">char</span> <span style="color: #715ab1;">s_base</span>[80],<span style="color: #ba2f59; font-weight: bold;">char</span> <span style="color: #715ab1;">s_pars</span>[150],\
+                     <span style="color: #ba2f59; font-weight: bold;">char</span> <span style="color: #715ab1;">s_term</span>[20],<span style="color: #ba2f59; font-weight: bold;">char</span> *<span style="color: #715ab1;">s_file</span>){
+  sprintf(s_file,<span style="color: #2d9574;">"%s"</span>,s_base);
   strcat(s_file,s_pars);
   strcat(s_file,s_aux);
   strcat(s_file,s_term);
-  <span style="color: #5F7F5F;">//</span><span style="color: #7F9F7F;">printf("%s\n",s_file);</span>
+  <span style="color: #2aa1ae; background-color: #ecf3ec;">//</span><span style="color: #2aa1ae; background-color: #ecf3ec;">printf("%s\n",s_file);</span>
 } 
 
 
-<span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">---------------------------------------------------------------------- </span><span style="color: #5F7F5F;">*/</span>
-<span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">Cuenta el numero de filas en un archivo </span><span style="color: #5F7F5F;">*/</span>
-<span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">---------------------------------------------------------------------- </span><span style="color: #5F7F5F;">*/</span>
-<span style="color: #7CB8BB;">double</span> <span style="color: #93E0E3;">lineCount</span>(<span style="color: #7CB8BB;">FILE</span> *<span style="color: #DFAF8F;">f</span>){
-  <span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">ch</span>, <span style="color: #DFAF8F;">lines</span>;
+<span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">---------------------------------------------------------------------- </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Cuenta el numero de filas en un archivo </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">---------------------------------------------------------------------- </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<span style="color: #ba2f59; font-weight: bold;">double</span> <span style="color: #6c3163; font-weight: bold;">lineCount</span>(<span style="color: #ba2f59; font-weight: bold;">FILE</span> *<span style="color: #715ab1;">f</span>){
+  <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">ch</span>, <span style="color: #715ab1;">lines</span>;
   lines = 0;
-  <span style="color: #F0DFAF; font-weight: bold;">while</span>(<span style="color: #F0DFAF; font-weight: bold;">!</span>feof(f))
+  <span style="color: #3a81c3; font-weight: bold;">while</span>(<span style="color: #4e3163;">!</span>feof(f))
     {
       ch = fgetc(f);
-      <span style="color: #F0DFAF; font-weight: bold;">if</span>(ch == <span style="color: #CC9393;">'\n'</span>)
+      <span style="color: #3a81c3; font-weight: bold;">if</span>(ch == <span style="color: #2d9574;">'\n'</span>)
         lines++;
     }
   fclose(f);
-  <span style="color: #F0DFAF; font-weight: bold;">return</span> lines;
+  <span style="color: #3a81c3; font-weight: bold;">return</span> lines;
 }
 
 
 
 
-<span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">---------------------------------------------------------------------- </span><span style="color: #5F7F5F;">*/</span>
-<span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">Calculo del tiempo de computo </span><span style="color: #5F7F5F;">*/</span>
-<span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">---------------------------------------------------------------------- </span><span style="color: #5F7F5F;">*/</span>
-<span style="color: #7CB8BB;">clock_t</span> <span style="color: #DFAF8F;">qq_0</span>;
-<span style="color: #7CB8BB;">void</span> <span style="color: #93E0E3;">rtimer</span>() {
+<span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">---------------------------------------------------------------------- </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Calculo del tiempo de computo </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">---------------------------------------------------------------------- </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<span style="color: #ba2f59; font-weight: bold;">clock_t</span> <span style="color: #715ab1;">qq_0</span>;
+<span style="color: #ba2f59; font-weight: bold;">void</span> <span style="color: #6c3163; font-weight: bold;">rtimer</span>() {
         qq_0=clock();
 }
 
-<span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">Devuelve el numero de minutos transcurridos del CPU hasta la llamada </span><span style="color: #5F7F5F;">*/</span>
-<span style="color: #7CB8BB;">double</span> <span style="color: #93E0E3;">minut_cpu</span>() {
-  <span style="color: #7CB8BB;">clock_t</span> <span style="color: #DFAF8F;">qq_1</span>;
-  <span style="color: #7CB8BB;">double</span> <span style="color: #DFAF8F;">a</span>,<span style="color: #DFAF8F;">fakt</span>=(1./60.)*(1./CLOCKS_PER_SEC);
+<span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Devuelve el numero de minutos transcurridos del CPU hasta la llamada </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<span style="color: #ba2f59; font-weight: bold;">double</span> <span style="color: #6c3163; font-weight: bold;">minut_cpu</span>() {
+  <span style="color: #ba2f59; font-weight: bold;">clock_t</span> <span style="color: #715ab1;">qq_1</span>;
+  <span style="color: #ba2f59; font-weight: bold;">double</span> <span style="color: #715ab1;">a</span>,<span style="color: #715ab1;">fakt</span>=(1./60.)*(1./CLOCKS_PER_SEC);
 
   qq_1=clock();
   a=fakt*(qq_1-qq_0);
 
-  <span style="color: #F0DFAF; font-weight: bold;">return</span>(a);
+  <span style="color: #3a81c3; font-weight: bold;">return</span>(a);
 }
 
-<span style="color: #94BFF3;">#undef</span> PI
+<span style="color: #6c3163;">#undef</span> PI
 
 </pre>
 </div>
@@ -1709,7 +1779,7 @@ El archivo <code>base.c/base.h</code> contiene una algunas funciones básicas de
 <div id="postamble" class="status">
 <p class="date">Date: 2019:03:5</p>
 <p class="author">Author: Isaías Moreno Cruz</p>
-<p class="date">Created: 2019-03-13 Wed 21:57</p>
+<p class="date">Created: 2019-04-23 Tue 23:48</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
