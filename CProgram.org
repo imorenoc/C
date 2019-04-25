@@ -8,7 +8,6 @@
 * Introducción
 
 
-
 * Teoría básica
 
 ** Hola Mundo
@@ -381,18 +380,20 @@ La función =while= realiza el ciclo mientras no se cumpla la condición.
   #include <stdio.h>
 
   int main() {
-    int counter =1;		/* Inicializaci'on */
+    int counter = 1;		/* Inicializaci'on */
 
-  while (counter <= 5) {		/* Condici'on */
+  while (counter <= 6) {		/* Condici'on */
     printf("%d ", counter);
     ++counter;			/* Incremento */
    }
    printf("\n");
+
+   return 0;
   }
 #+END_SRC
 
 #+RESULTS: while.c
-: 1 2 3 4 5
+: 1 2 3 4 5 6
 
 ** do/while
 
@@ -441,14 +442,14 @@ for (x=1; x<=10; x++) {
   printf("%d ", x);
  }
 
- printf("\n Salida por break a  x == %d\n", x);
+ printf("\n Salida por break a  x=%d\n", x);
   return 0;
 }
 #+END_SRC
 
 #+RESULTS: break.c
-|      1 |   2 |     3 | 4 |   |    |   |
-| Salida | por | break | a | x | == | 5 |
+|      1 |   2 |     3 | 4 |     |
+| Salida | por | break | a | x=5 |
 
 * Funciones
 
@@ -459,13 +460,15 @@ Las funciones en =C= pueden ser declaradas dentro de la función principal, =pia
 
 Para utilizar una función dentro de =C= es necesaria definirla primero. Vamos a definir la función =square=, que eleva al cuadrado cualquier número entero.
 
-#+BEGIN_EXAMPLE
+#+BEGIN_SRC C 
+/*
 int square(int y){
 int x;
 x = y*y;
 return x;
 }
-#+END_EXAMPLE
+*/
+#+END_SRC
 
 El nombre =square= es el nombre de la función, la declaración =int= antes de la función indica que espera de regreso un entero. lo que esta entre paréntesis son las variables de entrada de la función. Dentro de una función puedes declarar las variables que necesites, pero al final el regreso sera un entero, para este caso.
 
@@ -528,7 +531,7 @@ Ahora el archivo principal que contiene el =main=, que llamaremos =mainf.c=, pue
 #+BEGIN_SRC C :flags square.c 
   /* gcc -o mainf mainf.c square.c */
   #include <stdio.h>
-  /* #include "square.h" */
+  #include "square.h"
   int main() {
     int x;
 

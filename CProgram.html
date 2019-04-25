@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-04-23 Tue 23:48 -->
+<!-- 2019-04-25 Thu 10:24 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Curso práctico de programación en C</title>
@@ -257,41 +257,41 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org75c7d89">1. Introducción</a></li>
-<li><a href="#org49493a4">2. Teoría básica</a>
+<li><a href="#orgf59ddd7">1. Introducción</a></li>
+<li><a href="#orgfdfc852">2. Teoría básica</a>
 <ul>
-<li><a href="#orgf02a4f1">2.1. Hola Mundo</a></li>
-<li><a href="#org1112a21">2.2. Operaciones matemáticas</a></li>
-<li><a href="#org54c76ae">2.3. Lectura de datos con <code>scanf</code></a></li>
+<li><a href="#org700dc5d">2.1. Hola Mundo</a></li>
+<li><a href="#orgf80abae">2.2. Operaciones matemáticas</a></li>
+<li><a href="#org6dd4a4d">2.3. Lectura de datos con <code>scanf</code></a></li>
 </ul>
 </li>
-<li><a href="#orge975973">3. Ciclos</a>
+<li><a href="#orgaed35c7">3. Ciclos</a>
 <ul>
-<li><a href="#org146f574">3.1. for</a></li>
-<li><a href="#org857cef1">3.2. if</a></li>
-<li><a href="#org95a9581">3.3. else</a></li>
-<li><a href="#orga2dcf8d">3.4. else if</a></li>
-<li><a href="#org3bbbbef">3.5. while</a></li>
-<li><a href="#orgcecda3c">3.6. do/while</a></li>
-<li><a href="#org7b4139c">3.7. break</a></li>
+<li><a href="#org10e499e">3.1. for</a></li>
+<li><a href="#orgff87968">3.2. if</a></li>
+<li><a href="#org586f9dc">3.3. else</a></li>
+<li><a href="#orgb80903d">3.4. else if</a></li>
+<li><a href="#orga91e004">3.5. while</a></li>
+<li><a href="#org24067b1">3.6. do/while</a></li>
+<li><a href="#org0279f51">3.7. break</a></li>
 </ul>
 </li>
-<li><a href="#org6aa882a">4. Funciones</a>
+<li><a href="#org096336f">4. Funciones</a>
 <ul>
-<li><a href="#orgf144ca5">4.1. Declaración de la función dentro del <code>main</code></a></li>
-<li><a href="#orgb37e808">4.2. Declaración de la función en un archivo externo</a></li>
+<li><a href="#org93d8af1">4.1. Declaración de la función dentro del <code>main</code></a></li>
+<li><a href="#org83f37c2">4.2. Declaración de la función en un archivo externo</a></li>
 </ul>
 </li>
-<li><a href="#orge298fa5">5. Punteros</a></li>
-<li><a href="#org723e8dd">6. Leer datos de entrada desde la terminal</a></li>
-<li><a href="#org4e8beba">7. Guardar datos de salida en archivo</a></li>
-<li><a href="#org6d4b723">8. Leer un archivo de datos</a></li>
-<li><a href="#org250429e">9. Reciclando código</a></li>
-<li><a href="#orge98bd41">10. Makefile</a></li>
-<li><a href="#org84f8607">11. Funciones gsl</a></li>
-<li><a href="#org90d854c">12. Funciones básicas</a>
+<li><a href="#orga4558e6">5. Punteros</a></li>
+<li><a href="#org171c04e">6. Leer datos de entrada desde la terminal</a></li>
+<li><a href="#org2b32822">7. Guardar datos de salida en archivo</a></li>
+<li><a href="#org40c334c">8. Leer un archivo de datos</a></li>
+<li><a href="#org9a0c3ee">9. Reciclando código</a></li>
+<li><a href="#orgc414928">10. Makefile</a></li>
+<li><a href="#org30278c8">11. Funciones gsl</a></li>
+<li><a href="#orgd04baf9">12. Funciones básicas</a>
 <ul>
-<li><a href="#org5ffb053">12.1. Base</a></li>
+<li><a href="#orgb47f200">12.1. Base</a></li>
 </ul>
 </li>
 </ul>
@@ -299,25 +299,24 @@ for the JavaScript code in this tag.
 </div>
 
 
-<div id="outline-container-org75c7d89" class="outline-2">
-<h2 id="org75c7d89"><span class="section-number-2">1</span> Introducción</h2>
+<div id="outline-container-orgf59ddd7" class="outline-2">
+<h2 id="orgf59ddd7"><span class="section-number-2">1</span> Introducción</h2>
 </div>
 
 
-
-<div id="outline-container-org49493a4" class="outline-2">
-<h2 id="org49493a4"><span class="section-number-2">2</span> Teoría básica</h2>
+<div id="outline-container-orgfdfc852" class="outline-2">
+<h2 id="orgfdfc852"><span class="section-number-2">2</span> Teoría básica</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-orgf02a4f1" class="outline-3">
-<h3 id="orgf02a4f1"><span class="section-number-3">2.1</span> Hola Mundo</h3>
+<div id="outline-container-org700dc5d" class="outline-3">
+<h3 id="org700dc5d"><span class="section-number-3">2.1</span> Hola Mundo</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 El programa clásico para iniciar es el <code>¡hola mundo!</code>. Que continuación se muestra.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-C" id="orgb4e1867"><span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">gcc -o hello hello.c </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<pre class="src src-C" id="org18644b9"><span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">gcc -o hello hello.c </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
 <span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdio.h&gt;</span>
 
 <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">main</span>()
@@ -364,8 +363,8 @@ La primera opción nos generara un archivo <code>a.out</code>, que podemos ejecu
 </div>
 </div>
 
-<div id="outline-container-org1112a21" class="outline-3">
-<h3 id="org1112a21"><span class="section-number-3">2.2</span> Operaciones matemáticas</h3>
+<div id="outline-container-orgf80abae" class="outline-3">
+<h3 id="orgf80abae"><span class="section-number-3">2.2</span> Operaciones matemáticas</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 El programa <code>math.c</code> muestra las operaciones que pueden ser ejecutadas en <code>C</code>, es decir:
@@ -394,7 +393,7 @@ La etiqueta <code>-lm</code> indica al compilador que utilice la biblioteca de m
 </p>
 
 <div class="org-src-container">
-<pre class="src src-C" id="org89399fd"><span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdio.h&gt;</span>
+<pre class="src src-C" id="orgf7975ee"><span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdio.h&gt;</span>
 <span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;math.h&gt;</span>
 
 <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">main</span>() {
@@ -533,15 +532,15 @@ Entre comillas va el texto que deseamos imprimir <code>"Resta %f ..."</code>, el
 </div>
 </div>
 
-<div id="outline-container-org54c76ae" class="outline-3">
-<h3 id="org54c76ae"><span class="section-number-3">2.3</span> Lectura de datos con <code>scanf</code></h3>
+<div id="outline-container-org6dd4a4d" class="outline-3">
+<h3 id="org6dd4a4d"><span class="section-number-3">2.3</span> Lectura de datos con <code>scanf</code></h3>
 <div class="outline-text-3" id="text-2-3">
 <p>
 Una forma interactiva de ejecutar un programa es solicitando los valores de algunos valores. Es una forma muy tediosa de ejecutar un programa, al principio puede resultar útil pero con el tiempo (al terminar este manual, por ejemplo) se dará cuenta que hay mejores alternativas. Pero no deja de ser ilustrativo.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-C" id="org1e5ed6d"><span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">gcc -o scanf scanf.c </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<pre class="src src-C" id="org948ce0f"><span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">gcc -o scanf scanf.c </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
 <span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdio.h&gt;</span>
 
 <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">main</span>()
@@ -607,15 +606,15 @@ Una forma interactiva de ejecutar un programa es solicitando los valores de algu
 </div>
 </div>
 
-<div id="outline-container-orge975973" class="outline-2">
-<h2 id="orge975973"><span class="section-number-2">3</span> Ciclos</h2>
+<div id="outline-container-orgaed35c7" class="outline-2">
+<h2 id="orgaed35c7"><span class="section-number-2">3</span> Ciclos</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Antes de iniciar con los ciclos, vamos ver el <b><b>preincremento y posincremento</b></b>, los cuales son muy útiles a la hora de realizar ciclos en <code>C</code>.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-C" id="org8f49dbb"><span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">gcc -o incrementing incrementing.c </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<pre class="src src-C" id="org75c77d9"><span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">gcc -o incrementing incrementing.c </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
 <span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdio.h&gt;</span>
 
 <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">main</span>() {
@@ -691,15 +690,15 @@ Para trabajar con ciclos también es necesario conocer los operadores Booleanos:
 </ul>
 </div>
 
-<div id="outline-container-org146f574" class="outline-3">
-<h3 id="org146f574"><span class="section-number-3">3.1</span> for</h3>
+<div id="outline-container-org10e499e" class="outline-3">
+<h3 id="org10e499e"><span class="section-number-3">3.1</span> for</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 El comando <code>for</code> realiza un ciclo definido por un contador, en un intervalo y con un incremento determinado. A continuación se muestra la sintaxis del comando <code>for</code>, el contador es <code>i</code> en el intervalo [0,n), con incrementos <code>i++</code>. Hay que recordar que los contadores en <code>C</code> inician en cero, y que \(i++\) es equivalente a  \(i= i + 1\).
 </p>
 
 <div class="org-src-container">
-<pre class="src src-C" id="org3343ba9"><span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">gcc -o for for.c </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<pre class="src src-C" id="org0695a93"><span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">gcc -o for for.c </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
 <span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdio.h&gt;</span>
 
 <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">main</span>( )
@@ -728,7 +727,7 @@ Para visualizar mejor lo que esta ocurriendo en el ciclo <code>for</code> vamos 
 </p>
 
 <div class="org-src-container">
-<pre class="src src-C" id="orgee6cff4"><span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">gcc -o for for.c </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<pre class="src src-C" id="org0b56b53"><span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">gcc -o for for.c </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
 <span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdio.h&gt;</span>
 
 <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">main</span>( )
@@ -787,15 +786,15 @@ Para visualizar mejor lo que esta ocurriendo en el ciclo <code>for</code> vamos 
 </div>
 
 
-<div id="outline-container-org857cef1" class="outline-3">
-<h3 id="org857cef1"><span class="section-number-3">3.2</span> if</h3>
+<div id="outline-container-orgff87968" class="outline-3">
+<h3 id="orgff87968"><span class="section-number-3">3.2</span> if</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 El ciclo <code>if</code> es un condición, el ciclo se realizará mientras se cumpla una condición, cuando esta condición sea falsa entonces el ciclo termina.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-C" id="org0fab4f6"><span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Uso de operadores </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<pre class="src src-C" id="org41917f8"><span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Uso de operadores </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
 <span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdio.h&gt;</span>
 
 <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">main</span>()
@@ -888,15 +887,15 @@ El ciclo <code>if</code> es un condición, el ciclo se realizará mientras se cu
 </div>
 
 
-<div id="outline-container-org95a9581" class="outline-3">
-<h3 id="org95a9581"><span class="section-number-3">3.3</span> else</h3>
+<div id="outline-container-org586f9dc" class="outline-3">
+<h3 id="org586f9dc"><span class="section-number-3">3.3</span> else</h3>
 <div class="outline-text-3" id="text-3-3">
 <p>
 La función <code>else</code> se utiliza en el ciclo de condición <code>if</code> de manera que si no cumple la condición de <code>if</code> entonces realiza <code>else</code>.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-C" id="orgef7ae3b"><span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdio.h&gt;</span>
+<pre class="src src-C" id="org1318740"><span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdio.h&gt;</span>
 
 <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">main</span>( )
 {
@@ -924,15 +923,15 @@ Número impar
 </div>
 </div>
 
-<div id="outline-container-orga2dcf8d" class="outline-3">
-<h3 id="orga2dcf8d"><span class="section-number-3">3.4</span> else if</h3>
+<div id="outline-container-orgb80903d" class="outline-3">
+<h3 id="orgb80903d"><span class="section-number-3">3.4</span> else if</h3>
 <div class="outline-text-3" id="text-3-4">
 <p>
 La función <code>else if</code> nos permite colocar mas de una condición en el ciclo de la siguiente manera. 
 </p>
 
 <div class="org-src-container">
-<pre class="src src-C" id="orgcca6770"><span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Uso de operadores </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<pre class="src src-C" id="orgd5545ab"><span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Uso de operadores </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
 <span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdio.h&gt;</span>
 
 <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">main</span>()
@@ -967,45 +966,47 @@ La función <code>else if</code> nos permite colocar mas de una condición en el
 </div>
 </div>
 
-<div id="outline-container-org3bbbbef" class="outline-3">
-<h3 id="org3bbbbef"><span class="section-number-3">3.5</span> while</h3>
+<div id="outline-container-orga91e004" class="outline-3">
+<h3 id="orga91e004"><span class="section-number-3">3.5</span> while</h3>
 <div class="outline-text-3" id="text-3-5">
 <p>
 La función <code>while</code> realiza el ciclo mientras no se cumpla la condición.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-C" id="org136ff19"><span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Uso del While </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<pre class="src src-C" id="org535856b"><span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Uso del While </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
 <span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdio.h&gt;</span>
 
 <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">main</span>() {
-  <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">counter</span> =1;               <span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Inicializaci'on </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+  <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">counter</span> = 1;              <span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Inicializaci'on </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
 
-<span style="color: #3a81c3; font-weight: bold;">while</span> (counter &lt;= 5) {          <span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Condici'on </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<span style="color: #3a81c3; font-weight: bold;">while</span> (counter &lt;= 6) {          <span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Condici'on </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
   printf(<span style="color: #2d9574;">"%d "</span>, counter);
   ++counter;                    <span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Incremento </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
  }
  printf(<span style="color: #2d9574;">"\n"</span>);
+
+ <span style="color: #3a81c3; font-weight: bold;">return</span> 0;
 }
 </pre>
 </div>
 
 <pre class="example">
-1 2 3 4 5
+1 2 3 4 5 6
 
 </pre>
 </div>
 </div>
 
-<div id="outline-container-orgcecda3c" class="outline-3">
-<h3 id="orgcecda3c"><span class="section-number-3">3.6</span> do/while</h3>
+<div id="outline-container-org24067b1" class="outline-3">
+<h3 id="org24067b1"><span class="section-number-3">3.6</span> do/while</h3>
 <div class="outline-text-3" id="text-3-6">
 <p>
 El ciclo <code>do/while</code>  es similar al <code>while</code>, pero cambia la estructura.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-C" id="org2d29d8b"><span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Uso de la estructura do/while  </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<pre class="src src-C" id="org3a088a8"><span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Uso de la estructura do/while  </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
 <span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdio.h&gt;</span>
 
 <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">main</span>( )
@@ -1031,15 +1032,15 @@ El ciclo <code>do/while</code>  es similar al <code>while</code>, pero cambia la
 </div>
 </div>
 
-<div id="outline-container-org7b4139c" class="outline-3">
-<h3 id="org7b4139c"><span class="section-number-3">3.7</span> break</h3>
+<div id="outline-container-org0279f51" class="outline-3">
+<h3 id="org0279f51"><span class="section-number-3">3.7</span> break</h3>
 <div class="outline-text-3" id="text-3-7">
 <p>
 No se recomienda el uso del comando <code>break</code>. Algunos programadores son de la opinión de que <code>break</code> y <code>continue</code> violan las normas de la programación estructurada.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-C" id="orgdcc6ce4"><span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Uso de la declaraci'on brake dentro de la estructura </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<pre class="src src-C" id="org744480d"><span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Uso de la declaraci'on brake dentro de la estructura </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
 
 <span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdio.h&gt;</span>
 
@@ -1053,7 +1054,7 @@ No se recomienda el uso del comando <code>break</code>. Algunos programadores so
   printf(<span style="color: #2d9574;">"%d "</span>, x);
  }
 
- printf(<span style="color: #2d9574;">"\n Salida por break a  x == %d\n"</span>, x);
+ printf(<span style="color: #2d9574;">"\n Salida por break a  x=%d\n"</span>, x);
   <span style="color: #3a81c3; font-weight: bold;">return</span> 0;
 }
 </pre>
@@ -1072,10 +1073,6 @@ No se recomienda el uso del comando <code>break</code>. Algunos programadores so
 <col  class="org-right" />
 
 <col  class="org-left" />
-
-<col  class="org-left" />
-
-<col  class="org-right" />
 </colgroup>
 <tbody>
 <tr>
@@ -1084,8 +1081,6 @@ No se recomienda el uso del comando <code>break</code>. Algunos programadores so
 <td class="org-right">3</td>
 <td class="org-right">4</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-right">&#xa0;</td>
 </tr>
 
 <tr>
@@ -1093,9 +1088,7 @@ No se recomienda el uso del comando <code>break</code>. Algunos programadores so
 <td class="org-right">por</td>
 <td class="org-right">break</td>
 <td class="org-right">a</td>
-<td class="org-left">x</td>
-<td class="org-left">==</td>
-<td class="org-right">5</td>
+<td class="org-left">x=5</td>
 </tr>
 </tbody>
 </table>
@@ -1103,8 +1096,8 @@ No se recomienda el uso del comando <code>break</code>. Algunos programadores so
 </div>
 </div>
 
-<div id="outline-container-org6aa882a" class="outline-2">
-<h2 id="org6aa882a"><span class="section-number-2">4</span> Funciones</h2>
+<div id="outline-container-org096336f" class="outline-2">
+<h2 id="org096336f"><span class="section-number-2">4</span> Funciones</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Las funciones en <code>C</code> pueden ser declaradas dentro de la función principal, <code>pian</code>, o en un archivo externo y llamado como una biblioteca.
@@ -1112,20 +1105,23 @@ Las funciones en <code>C</code> pueden ser declaradas dentro de la función prin
 </div>
 
 
-<div id="outline-container-orgf144ca5" class="outline-3">
-<h3 id="orgf144ca5"><span class="section-number-3">4.1</span> Declaración de la función dentro del <code>main</code></h3>
+<div id="outline-container-org93d8af1" class="outline-3">
+<h3 id="org93d8af1"><span class="section-number-3">4.1</span> Declaración de la función dentro del <code>main</code></h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 Para utilizar una función dentro de <code>C</code> es necesaria definirla primero. Vamos a definir la función <code>square</code>, que eleva al cuadrado cualquier número entero.
 </p>
 
-<pre class="example">
-int square(int y){
-int x;
-x = y*y;
-return x;
-}
+<div class="org-src-container">
+<pre class="src src-C"><span style="color: #2aa1ae; background-color: #ecf3ec;">/*</span>
+<span style="color: #2aa1ae; background-color: #ecf3ec;">int square(int y){</span>
+<span style="color: #2aa1ae; background-color: #ecf3ec;">int x;</span>
+<span style="color: #2aa1ae; background-color: #ecf3ec;">x = y*y;</span>
+<span style="color: #2aa1ae; background-color: #ecf3ec;">return x;</span>
+<span style="color: #2aa1ae; background-color: #ecf3ec;">}</span>
+<span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
 </pre>
+</div>
 
 <p>
 El nombre <code>square</code> es el nombre de la función, la declaración <code>int</code> antes de la función indica que espera de regreso un entero. lo que esta entre paréntesis son las variables de entrada de la función. Dentro de una función puedes declarar las variables que necesites, pero al final el regreso sera un entero, para este caso.
@@ -1137,7 +1133,7 @@ Cuando se define la función dentro del <code>main</code> hay que indicar que es
 
 
 <div class="org-src-container">
-<pre class="src src-C" id="org37abbd3"><span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">gcc -o square -square.c </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<pre class="src src-C" id="orga96aeae"><span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">gcc -o square -square.c </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
 <span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdio.h&gt;</span>
 
 <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">square</span>(<span style="color: #ba2f59; font-weight: bold;">int</span>);
@@ -1172,8 +1168,8 @@ De esta manera podemos declarar las funciones necesarias dentro de nuestro progr
 </div>
 
 
-<div id="outline-container-orgb37e808" class="outline-3">
-<h3 id="orgb37e808"><span class="section-number-3">4.2</span> Declaración de la función en un archivo externo</h3>
+<div id="outline-container-org83f37c2" class="outline-3">
+<h3 id="org83f37c2"><span class="section-number-3">4.2</span> Declaración de la función en un archivo externo</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
 Cuando el programa es muy grande no conviene definir todas las funciones dentro del <code>main</code>. Una alternativa es generar todas las funciones en un archivo distinto. Por ejemplo, un archivo llamado <code>square.c</code>.
@@ -1210,7 +1206,7 @@ int square(int y);
 <div class="org-src-container">
 <pre class="src src-C"><span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">gcc -o mainf mainf.c square.c </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
 <span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdio.h&gt;</span>
-<span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">#include "square.h" </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">"square.h"</span>
 <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">main</span>() {
   <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">x</span>;
 
@@ -1231,8 +1227,8 @@ El resultado es el mismo.
 </div>
 </div>
 
-<div id="outline-container-orge298fa5" class="outline-2">
-<h2 id="orge298fa5"><span class="section-number-2">5</span> Punteros</h2>
+<div id="outline-container-orga4558e6" class="outline-2">
+<h2 id="orga4558e6"><span class="section-number-2">5</span> Punteros</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 Las operaciones con matrices son quizás la forma más fácil de resolver un problema matemático. En <code>C</code> las matrices no están definidas, pero existen punteros que nos permiten definir arreglos de datos.
@@ -1286,7 +1282,7 @@ A continuación se muestra el uso de la función <code>dot</code>.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-C" id="orgd3ee874"><span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Producto punto </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<pre class="src src-C" id="orgef5d200"><span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Producto punto </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
 <span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">gcc -o dot dot.c </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
 <span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdio.h&gt;</span>
 <span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdlib.h&gt;</span>
@@ -1333,8 +1329,8 @@ Para definir un punteros puntero primero declaramos la variable en este caso <co
 </div>
 </div>
 
-<div id="outline-container-org723e8dd" class="outline-2">
-<h2 id="org723e8dd"><span class="section-number-2">6</span> Leer datos de entrada desde la terminal</h2>
+<div id="outline-container-org171c04e" class="outline-2">
+<h2 id="org171c04e"><span class="section-number-2">6</span> Leer datos de entrada desde la terminal</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 Previamente se había comentado que no era tan eficiente leer datos con <code>scanf</code>, y es que es posible ingresar datos directamente desde la terminal, al ejecutar el programa.
@@ -1353,7 +1349,7 @@ A continuación se muestra el programa <code>readT.c</code> que pude leer los da
 </p>
 
 <div class="org-src-container">
-<pre class="src src-C" id="orgc5a29dd"><span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdio.h&gt;</span>
+<pre class="src src-C" id="org84c1493"><span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdio.h&gt;</span>
 <span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdlib.h&gt;</span>
 
 <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">main</span>(<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">argc</span>, <span style="color: #ba2f59; font-weight: bold;">char</span> *<span style="color: #715ab1;">argv</span>[]) {
@@ -1387,8 +1383,8 @@ Este tipo de ejecutables son muy útiles, pues fácilmente pueden cambiarse las 
 </div>
 </div>
 
-<div id="outline-container-org4e8beba" class="outline-2">
-<h2 id="org4e8beba"><span class="section-number-2">7</span> Guardar datos de salida en archivo</h2>
+<div id="outline-container-org2b32822" class="outline-2">
+<h2 id="org2b32822"><span class="section-number-2">7</span> Guardar datos de salida en archivo</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 Ahora vamos a hacer un programa más elaborado, en el cual utilizaremos una nueva función llamada <code>fprintf</code>, la cual nos permite enviar la información a un archivo.
@@ -1428,7 +1424,7 @@ Donde \(N\) es el día del año, y \(E(B)\) esta en minutos.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-C" id="org8b30e3d"><span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">ggc -o EdT EdT.c </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<pre class="src src-C" id="org2fadc86"><span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">ggc -o EdT EdT.c </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
 <span style="color: #6c3163;">  #include</span> <span style="color: #2d9574;">&lt;stdio.h&gt;</span>
 <span style="color: #6c3163;">  #include</span> <span style="color: #2d9574;">&lt;math.h&gt;</span>
 
@@ -1556,16 +1552,16 @@ A continuación se muestra parte de los resultados del archivo <code>EdT.dat</co
 
 
 
-<div id="outline-container-org6d4b723" class="outline-2">
-<h2 id="org6d4b723"><span class="section-number-2">8</span> Leer un archivo de datos</h2>
+<div id="outline-container-org40c334c" class="outline-2">
+<h2 id="org40c334c"><span class="section-number-2">8</span> Leer un archivo de datos</h2>
 </div>
 
-<div id="outline-container-org250429e" class="outline-2">
-<h2 id="org250429e"><span class="section-number-2">9</span> Reciclando código</h2>
+<div id="outline-container-org9a0c3ee" class="outline-2">
+<h2 id="org9a0c3ee"><span class="section-number-2">9</span> Reciclando código</h2>
 </div>
 
-<div id="outline-container-orge98bd41" class="outline-2">
-<h2 id="orge98bd41"><span class="section-number-2">10</span> Makefile</h2>
+<div id="outline-container-orgc414928" class="outline-2">
+<h2 id="orgc414928"><span class="section-number-2">10</span> Makefile</h2>
 <div class="outline-text-2" id="text-10">
 <p>
 Los archivos <code>Makefile</code> son útiles cuando se tiene una gran cantidad de bibliotecas locales. 
@@ -1574,27 +1570,27 @@ Los archivos <code>Makefile</code> son útiles cuando se tiene una gran cantidad
 </div>
 
 
-<div id="outline-container-org84f8607" class="outline-2">
-<h2 id="org84f8607"><span class="section-number-2">11</span> Funciones gsl</h2>
+<div id="outline-container-org30278c8" class="outline-2">
+<h2 id="org30278c8"><span class="section-number-2">11</span> Funciones gsl</h2>
 </div>
 
-<div id="outline-container-org90d854c" class="outline-2">
-<h2 id="org90d854c"><span class="section-number-2">12</span> Funciones básicas</h2>
+<div id="outline-container-orgd04baf9" class="outline-2">
+<h2 id="orgd04baf9"><span class="section-number-2">12</span> Funciones básicas</h2>
 <div class="outline-text-2" id="text-12">
 <p>
 Para una buena programación es necesarío tener una buena base de funciones programadas
 </p>
 </div>
 
-<div id="outline-container-org5ffb053" class="outline-3">
-<h3 id="org5ffb053"><span class="section-number-3">12.1</span> Base</h3>
+<div id="outline-container-orgb47f200" class="outline-3">
+<h3 id="orgb47f200"><span class="section-number-3">12.1</span> Base</h3>
 <div class="outline-text-3" id="text-12-1">
 <p>
 El archivo <code>base.c/base.h</code> contiene una algunas funciones básicas de uso común en todos los programas.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-C" id="orgb70aeb4"><span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdio.h&gt;</span>
+<pre class="src src-C" id="org3febe1f"><span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdio.h&gt;</span>
 
 <span style="color: #6c3163;">#define</span> <span style="color: #715ab1;">PI</span>    3.1415926535897932384626433832795028841971
 
@@ -1629,7 +1625,7 @@ El archivo <code>base.c/base.h</code> contiene una algunas funciones básicas de
 </div>
 
 <div class="org-src-container">
-<pre class="src src-C" id="org0d4ac8b"><span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdio.h&gt;</span>
+<pre class="src src-C" id="org7f0eab5"><span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdio.h&gt;</span>
 <span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;stdlib.h&gt;</span>
 <span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;string.h&gt;</span>
 <span style="color: #6c3163;">#include</span> <span style="color: #2d9574;">&lt;math.h&gt;</span>
@@ -1779,7 +1775,7 @@ El archivo <code>base.c/base.h</code> contiene una algunas funciones básicas de
 <div id="postamble" class="status">
 <p class="date">Date: 2019:03:5</p>
 <p class="author">Author: Isaías Moreno Cruz</p>
-<p class="date">Created: 2019-04-23 Tue 23:48</p>
+<p class="date">Created: 2019-04-25 Thu 10:24</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
