@@ -7,7 +7,6 @@
 
 * Introducción
 
-
 * Teoría básica
 
 ** Hola Mundo
@@ -163,12 +162,12 @@ Antes de iniciar con los ciclos, vamos ver el **preincremento y posincremento**,
   int main() {
     int c;
 
-    c = 5;
+    c = 2;
     printf("%d\n", c);
     printf("%d\n", c++);		/* posincremento */
     printf("%d\n\n", c);
 
-    c = 5;
+    c = 2;
     printf("%d\n", c);
     printf("%d\n", ++c);		/* preincremento */
     printf("%d\n\n", c);
@@ -178,13 +177,13 @@ Antes de iniciar con los ciclos, vamos ver el **preincremento y posincremento**,
 #+END_SRC
 
 #+RESULTS: incrementing.c
-| 5 |
-| 5 |
-| 6 |
+| 2 |
+| 2 |
+| 3 |
 |   |
-| 5 |
-| 6 |
-| 6 |
+| 2 |
+| 3 |
+| 3 |
 
 Lo que podemos observar es que =c++= incrementa el valor siguiente de manera posteriormente, mientras que =++c= lo hace de manera inmediatamente.
 
@@ -196,6 +195,11 @@ Para trabajar con ciclos también es necesario conocer los operadores Booleanos:
 + a > b, $a$ mayor que $b$
 + a <= b, $a$ menor o igual que $b$
 + a >= b, $a$ mayor o igual que $b$
+
+Puedes combinar más de una condición
+
++ =&&= , AND lógico
++ =||= , OR lógico
 
 ** for
 
@@ -210,7 +214,7 @@ El comando =for= realiza un ciclo definido por un contador, en un intervalo y co
   {
     int sum, i, N;
     sum = 0;
-    N = 50;
+    N = 5;
 
     for (i = 0; i < N; i++)
       sum += i;
@@ -222,7 +226,7 @@ El comando =for= realiza un ciclo definido por un contador, en un intervalo y co
 #+END_SRC
 
 #+RESULTS: for.c
-: La suma es 1225
+: La suma es 10
 
 Para visualizar mejor lo que esta ocurriendo en el ciclo =for= vamos a imprimirlo.
 
@@ -269,7 +273,7 @@ El ciclo =if= es un condición, el ciclo se realizará mientras se cumpla una co
     int a, b;
 
     a = 5;
-    b = 10;
+    b = 7;
   
     if (a == b){
 	printf("%d es igual a %d\n", a, b);
@@ -300,9 +304,9 @@ El ciclo =if= es un condición, el ciclo se realizará mientras se cumpla una co
 #+END_SRC
 
 #+RESULTS: if.c
-| 5 | no | es    | igual | a     |  10 |    |
-| 5 | es | menor | que   | 10    |     |    |
-| 5 | es | menor | o     | igual | que | 10 |
+| 5 | no | es    | igual | a     |   7 |   |
+| 5 | es | menor | que   | 7     |     |   |
+| 5 | es | menor | o     | igual | que | 7 |
 
 
 ** else
@@ -317,7 +321,7 @@ La función =else= se utiliza en el ciclo de condición =if= de manera que si no
   {
     int a;
 
-    a = 175;
+    a = 5;
 
     if(a%2 == 0){
       printf("Número par\n");
@@ -453,27 +457,29 @@ for (x=1; x<=10; x++) {
 
 * Funciones
 
-Las funciones en =C= pueden ser declaradas dentro de la función principal, =pian=, o en un archivo externo y llamado como una biblioteca.
-
+Las funciones en =C= pueden ser declaradas dentro de la función principal, =main=, o en un archivo externo y llamado como una biblioteca.
 
 ** Declaración de la función dentro del =main=
 
 Para utilizar una función dentro de =C= es necesaria definirla primero. Vamos a definir la función =square=, que eleva al cuadrado cualquier número entero.
 
-#+BEGIN_SRC C 
-/*
+
+#+BEGIN_EXAMPLE
 int square(int y){
 int x;
 x = y*y;
 return x;
 }
-*/
-#+END_SRC
+#+END_EXAMPLE
 
-El nombre =square= es el nombre de la función, la declaración =int= antes de la función indica que espera de regreso un entero. lo que esta entre paréntesis son las variables de entrada de la función. Dentro de una función puedes declarar las variables que necesites, pero al final el regreso sera un entero, para este caso.
++ *int square(int y)*.
+    - *int*, indica el tipo de variable que regresa la función
+    - *square*, indica el nombre de la función
+    - *(int y)*, son las variables de entrada de la función y el tipo de variable
 
-Cuando se define la función dentro del =main= hay que indicar que esa función existe, y se hace después de las declaraciones, la definición de la función va hasta el último.
+Dentro de una función puedes declarar las variables que necesites, pero al final el regreso sera un entero, para este caso.
 
+Cuando se define la función dentro del archivo donde esta el =main= hay que indicar que esa función existe, y se hace después de las bibliotecas y antes del inicio del =main=. Una vez que termina el =main=, se define la función.
 
 #+NAME: square.c
 #+BEGIN_SRC C :flags -lm :exports both
@@ -485,7 +491,7 @@ Cuando se define la función dentro del =main= hay que indicar que esa función 
   int main( ) {
     int x;
 
-    for (x=1; x <= 10; x++)
+    for (x=1; x <= 5; x++)
       printf("%d ", square(x));
 
     printf("\n");
@@ -500,7 +506,7 @@ Cuando se define la función dentro del =main= hay que indicar que esa función 
 #+END_SRC
 
 #+RESULTS: square.c
-: 1 4 9 16 25 36 49 64 81 100
+: 1 4 9 16 25
 
 De esta manera podemos declarar las funciones necesarias dentro de nuestro programa.
 
@@ -524,18 +530,20 @@ int square(int y);
 
 Ahora el archivo principal que contiene el =main=, que llamaremos =mainf.c=, puede utilizar la función =square()= únicamente declarándole que existe, para lo cual agregamos =#include "square.h"=. Para compilar el programa es necesario agregar el archivo que incluye la función:
 
+#+BEGIN_EXAMPLE
 > gcc -o mainf mainf.c  square.c
+#+END_EXAMPLE
+
 
 #+NAME: mainf.c
-#+INCLUDE: "square.h"
-#+BEGIN_SRC C :flags square.c 
+#+BEGIN_SRC C :flags square.c :include "square.h" :exports resutls
   /* gcc -o mainf mainf.c square.c */
   #include <stdio.h>
   #include "square.h"
   int main() {
     int x;
 
-    for (x=1; x <= 10; x++)
+    for (x=1; x <= 5; x++)
       printf("%d ", square(x));
 
     printf("\n");
@@ -544,8 +552,9 @@ Ahora el archivo principal que contiene el =main=, que llamaremos =mainf.c=, pue
 
 #+END_SRC
 
-#+RESULTS:
-: 1 4 9 16 25 36 49 64 81 100
+#+RESULTS: mainf.c
+: 1 4 9 16 25
+
 
 El resultado es el mismo.
 
@@ -553,7 +562,7 @@ El resultado es el mismo.
 
 Las operaciones con matrices son quizás la forma más fácil de resolver un problema matemático. En =C= las matrices no están definidas, pero existen punteros que nos permiten definir arreglos de datos.
 
-Vamos a definir una operación la operación producto punto =dot=, para lo cual es necesario definir una función que realice el producto punto, de la siguiente manera:
+Vamos a definir la operación producto punto =dot=, para lo cual es necesario definir una función que realice el producto punto, de la siguiente manera:
 
 #+BEGIN_EXAMPLE
 double dot(double *x, double *y){
@@ -637,6 +646,141 @@ A continuación se muestra el uso de la función =dot=.
 
 Para definir un punteros puntero primero declaramos la variable en este caso =double *x=, ahora =C= sabe que =x= es un puntero. Hay que reservar el espacio necesario, para lo cual utilizamos la función =calloc= y reservamos tres espacios =double= en $x$, =x = (double *)calloc(3, sizeof(double))=. Ahora ya es posible utilizar la variable =x= como vector.
 
+** Vectores y Matrices
+
+Trabajar con con vectores y matrices en =C= puede resultar complicado, pero si se tienen una estructura ordenada en el programa resultar tan fácil como en un lenguaje de alto nivel.
+
+A continuación vamos a definir una serie de funciones útiles para trabajar con matrices. Pero primero vamos a plantear un problema a resolver.
+
+
+*Problema*: Un vector $v = v_1, v_2, v_3 $ es rotado en un sistema de referencia coordenado un ángulo $\theta$ al rededor del eje $x$. ¿Calcula el nuevo vector? 
+
+*R*: La matriz de rotación es:
+
+\begin{equation}
+M  = \left[
+\begin{matrix}
+1 & 0 & 0 \\
+0 & \cos \theta & \sin \theta \\
+0 & -\sin \theta & \cos \theta
+\end{matrix} \right]
+\end{equation}
+
+Entonces $\vec v = M^{-1} \vec v'$
+
+#+BEGIN_SRC C :tangle vectorial.c :main no
+  #include <stdlib.h>
+
+  /* -------- */
+  /* Arreglos */
+  /* -------- */
+
+  /* 1D int */
+  int *one_d_int_array(int n) {
+    int *ptr;
+
+    ptr = (int *) calloc(n,sizeof(int));
+    return ptr;
+  }
+
+  /* 2D int */
+  int **two_d_int_array(int lx, int ly) {
+    int **ptr, i; 
+
+    ptr = (int **) calloc(lx,sizeof(int*));
+    for(i=0;i<lx;++i) 
+      ptr[i] = (int *) calloc(ly,sizeof(int));
+    return ptr;
+  }
+
+  /* 1D double */
+  double *one_d_double_array(int n) {
+    double *ptr;
+
+    ptr = (double *) calloc(n,sizeof(double));
+    return ptr;
+  }
+
+  /* 2D double */
+  double **two_d_double_array(int lx, int ly) {
+    int i;
+    double  **ptr;
+
+    ptr = (double **) calloc(lx,sizeof(double*));
+    for(i=0;i<lx;++i) 
+      ptr[i] = (double*) calloc(ly,sizeof(double));
+    return ptr;
+  }
+#+END_SRC 
+
+
+ #+BEGIN_SRC C :tangle vectorial.h :main no
+  #define PI    3.1415926535897932384626433832795028841971
+  #define D2R(grad) (grad*PI/180.0)
+  #define R2D(rad) (rad * 180.0/PI)
+
+   int *one_d_int_array (int n);
+   int **two_d_int_array(int lx, int ly);
+   double *one_d_double_array(int n);
+   double **two_d_double_array(int lx, int ly);
+ #+END_SRC
+
+
+#+BEGIN_SRC C :tangle runvec.c
+  /* gcc -o runvec runvec.c vectorial.c  */
+  #include <stdio.h>
+  #include <math.h>
+  #include "vectorial.h"
+
+  int main(int argc, char *argv[])
+  {
+    int i, j;
+    double theta;
+    double *v, *vr, **M;
+
+    v = one_d_double_array(3);
+    vr= one_d_double_array(3);
+    M = two_d_double_array(3, 3);
+
+    theta = D2R(90);
+
+    v[0] = 0.;
+    v[1] = 2.;
+    v[2] = 3.;
+
+    M[0][0] = 1.;
+    M[0][1] = 0.;
+    M[0][2] = 0.;
+
+    M[1][0] = 0.;
+    M[1][1] = cos(theta);
+    M[1][2] = -sin(theta);
+
+    M[2][0] = 0.;
+    M[2][1] = sin(theta);
+    M[2][2] = cos(theta);
+
+    for (i = 0; i < 3; ++i)
+      for (j = 0; j < 3; ++j)
+        vr[i] += M[i][j]*v[j];
+
+    printf("vr = (%.2f, %.2f, %.2f)\n", vr[0], vr[1], vr[2]);
+
+    return 0;
+  }
+#+END_SRC
+
+#+BEGIN_SRC sh :exports both
+  #!/usr/bin/env bash
+
+  gcc -o runvec runvec.c vectorial.c -lm 
+  ./runvec
+#+END_SRC
+
+#+RESULTS:
+| vr = (0.00 | -3.0 | 2.00) |
+
+
 * Leer datos de entrada desde la terminal
 
 Previamente se había comentado que no era tan eficiente leer datos con =scanf=, y es que es posible ingresar datos directamente desde la terminal, al ejecutar el programa.
@@ -680,6 +824,136 @@ Dentro del =main= se le indica que existirán argumentos sobre la linea de coman
 | 3.5 |
 
 Este tipo de ejecutables son muy útiles, pues fácilmente pueden cambiarse las variables de entrada y obtener nuevos resultados. 
+
+** Vectores y matrices
+
+El ejemplo de rotación alrededor del ángulo $\theta$ pude hacerse aun más manejable en el =main=.
+
+#+BEGIN_SRC C :tangle vectorial2.c :main no
+    #include <stdlib.h>
+    #include <math.h>
+    /* -------- */
+    /* Arreglos */
+    /* -------- */
+
+    /* 1D int */
+    int *one_d_int_array(int n) {
+      int *ptr;
+
+      ptr = (int *) calloc(n,sizeof(int));
+      return ptr;
+    }
+
+    /* 2D int */
+    int **two_d_int_array(int lx, int ly) {
+      int **ptr, i; 
+
+      ptr = (int **) calloc(lx,sizeof(int*));
+      for(i=0;i<lx;++i) 
+        ptr[i] = (int *) calloc(ly,sizeof(int));
+      return ptr;
+    }
+
+    /* 1D double */
+    double *one_d_double_array(int n) {
+      double *ptr;
+
+      ptr = (double *) calloc(n,sizeof(double));
+      return ptr;
+    }
+
+    /* 2D double */
+    double **two_d_double_array(int lx, int ly) {
+      int i;
+      double  **ptr;
+
+      ptr = (double **) calloc(lx,sizeof(double*));
+      for(i=0;i<lx;++i) 
+        ptr[i] = (double*) calloc(ly,sizeof(double));
+      return ptr;
+    }
+
+
+  double *rotx(double *v, double theta){
+    int i, j;
+    double *x, **M;
+
+    M = two_d_double_array(3, 3);
+    x = one_d_double_array(3);
+  
+      M[0][0] = 1.;
+      M[0][1] = 0.;
+      M[0][2] = 0.;
+    
+      M[1][0] = 0.;
+      M[1][1] = cos(theta);
+      M[1][2] = -sin(theta);
+
+      M[2][0] = 0.;
+      M[2][1] = sin(theta);
+      M[2][2] = cos(theta);
+
+      for (i = 0; i < 3; ++i)
+        for (j = 0; j < 3; ++j)
+          x[i] += M[i][j]*v[j];
+    
+      return x;
+  }
+#+END_SRC 
+
+
+ #+BEGIN_SRC C :tangle vectorial2.h :main no
+  #define PI    3.1415926535897932384626433832795028841971
+  #define D2R(grad) (grad*PI/180.0)
+  #define R2D(rad) (rad * 180.0/PI)
+
+   int *one_d_int_array (int n);
+   int **two_d_int_array(int lx, int ly);
+   double *one_d_double_array(int n);
+   double **two_d_double_array(int lx, int ly);
+   double *rotx(double *v, double theta);
+ #+END_SRC
+
+
+#+BEGIN_SRC C :tangle runvec2.c
+  /* gcc -o runvec runvec.c vectorial.c  */
+  #include <stdio.h>
+  #include <stdlib.h>
+  #include <math.h>
+  #include "vectorial2.h"
+
+  int main(int argc, char *argv[])
+  {
+    double theta;
+    double *u, *v, **M;
+
+    u = one_d_double_array(3);
+    v = one_d_double_array(3);
+    
+    u[0] = atof(argv[1]);
+    u[1] = atof(argv[2]);
+    u[2] = atof(argv[3]);
+
+    theta = atof(argv[4]);
+    theta = D2R(theta);
+
+    v = rotx(u, theta);
+
+    printf("v = (%.2f, %.2f, %.2f)\n", v[0], v[1], v[2]);
+
+    return 0;
+  }
+#+END_SRC
+
+#+BEGIN_SRC sh :exports both
+  #!/usr/bin/env bash
+
+  gcc -o runvec2 runvec2.c vectorial2.c -lm 
+  ./runvec2 1 2 0 45
+#+END_SRC
+
+#+RESULTS:
+| v = (1.00 | 1.41 | 1.41) |
 
 * Guardar datos de salida en archivo
 

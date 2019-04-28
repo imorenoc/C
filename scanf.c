@@ -5,7 +5,7 @@ int main()
 {
   int a, b, sum;
 
-  printf("Ingrese el primer enter\n");
+  printf("Ingrese el primer entero\n");
   scanf("%d", &a);
   printf("Ingrese el segundo entero\n");
   scanf("%d", &b);
